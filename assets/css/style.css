@@ -455,7 +455,7 @@ a:hover {
 
 @media (min-width: 768px) {
   .navbar-b.navbar-trans .nav-item, .navbar-b.navbar-reduce .nav-item {
-    padding-left: 10px;
+    padding-left: 8px;
   }
 }
 
@@ -642,10 +642,10 @@ a:hover {
 
 #particles-js {
   background-color: black;
-    position: absolute;
-    height: 100%;
-    width: 100%;
-    z-index: -1;
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
 }
 
 .intro .intro-content {
