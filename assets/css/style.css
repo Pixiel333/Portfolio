@@ -10,7 +10,7 @@
 --------------------------------------------------------------*/
 body {
   background-color: #f5f5f5;
-  color: #4e4e4e;
+  color: #ffffff;
 }
 
 h1,
@@ -19,7 +19,7 @@ h3,
 h4,
 h5,
 h6 {
-  color: #1e1e1e;
+  color: #ffffff;
 }
 
 a {
@@ -90,7 +90,7 @@ a:hover {
 }
 
 .overlay-mf {
-  background-color: #0078ff;
+  background-color: #8ba59b38;
 }
 
 .overlay-mf {
@@ -126,6 +126,7 @@ a:hover {
 
 .sect-pt4 {
   padding-top: 4rem;
+  background-color: rgb(44, 44, 44);
 }
 
 .sect-mt4 {
@@ -135,7 +136,7 @@ a:hover {
 /*--/ Title s /--*/
 .title-s {
   font-weight: 600;
-  color: #1e1e1e;
+  color: #ffffff;
   font-size: 1.1rem;
 }
 
@@ -188,10 +189,11 @@ a:hover {
 .box-shadow-full {
   padding: 3rem 1.25rem;
   position: relative;
-  background-color: #fff;
+  background-color: rgb(39, 39, 39);
   margin-bottom: 3rem;
   z-index: 2;
-  box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.06), 0 2px 5px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 5px 13px 9px 0px rgb(0 0 0 / 23%), 0 2px 5px 0 rgb(0 0 0 / 20%);
+  border-radius: .5rem;
 }
 
 @media (min-width: 768px) {
@@ -501,48 +503,48 @@ a:hover {
 }
 
 .navbar-b.navbar-trans .nav-link:before {
-  background-color: #fff;
+  background-color: #d0ffe5;
 }
 
 .navbar-b.navbar-trans .nav-link:hover {
-  color: #fff;
+  color: #d0ffe5;
 }
 
 .navbar-b.navbar-trans .show > .nav-link,
 .navbar-b.navbar-trans .active > .nav-link,
 .navbar-b.navbar-trans .nav-link.show,
 .navbar-b.navbar-trans .nav-link.active {
-  color: #fff;
+  color: #d0ffe5;
 }
 
 .navbar-b.navbar-reduce {
   transition: all .5s ease-in-out;
-  background-color: #fff;
+  background-color: #282828;
   padding-top: 15px;
   padding-bottom: 15px;
 }
 
 .navbar-b.navbar-reduce .nav-link {
-  color: #0078ff;
+  color: #ffffff;
 }
 
 .navbar-b.navbar-reduce .nav-link:before {
-  background-color: #0078ff;
+  background-color: #d0ffe5;
 }
 
 .navbar-b.navbar-reduce .nav-link:hover {
-  color: #0078ff;
+  color: #d0ffe5;
 }
 
 .navbar-b.navbar-reduce .show > .nav-link,
 .navbar-b.navbar-reduce .active > .nav-link,
 .navbar-b.navbar-reduce .nav-link.show,
 .navbar-b.navbar-reduce .nav-link.active {
-  color: #0078ff;
+  color: #d0ffe5;
 }
 
 .navbar-b.navbar-reduce .navbar-brand {
-  color: #0078ff;
+  color: #ffffff;
 }
 
 .navbar-b.navbar-reduce .navbar-toggler span {
@@ -642,9 +644,10 @@ a:hover {
 
 #particles-js {
   background-color: black;
-  position: absolute;
+  position: fixed;
   height: 100%;
   width: 100%;
+  top: 0;
   z-index: -1;
 }
 
@@ -736,7 +739,7 @@ a:hover {
 }
 
 .about-mf .about-img {
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .about-mf .about-img img {
@@ -748,6 +751,18 @@ a:hover {
     margin-top: 3rem;
     padding-left: 0rem;
   }
+}
+
+@media (min-width: 576px) {
+  .about-info-col {
+    flex: none;
+    max-width: 100%;
+    width: auto;
+  }
+}
+
+.about-info {
+  margin-bottom: 2rem;
 }
 
 .skill-mf span {
@@ -766,6 +781,37 @@ a:hover {
   background-color: #0078ff;
 }
 
+.resume-item {
+  margin-top: -2px;
+  border-left: 2px solid #0563bb;
+  position: relative;
+}
+
+.resume-item::before {
+  content: "";
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  border-radius: 50px;
+  left: -9px;
+  top: 0;
+  background: rgb(39, 39, 39);
+  border: 2px solid #0563bb;
+}
+
+.resume-item .title-s {
+  line-height: 0.8;
+  padding-left: 15px;
+}
+
+.resume-item ul {
+  line-height: 2;
+}
+@media (max-width: 992px) {
+  .pb-20 {
+    padding-bottom: 20px;
+  }
+}
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
