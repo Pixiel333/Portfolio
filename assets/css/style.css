@@ -9,7 +9,7 @@
 # General
 --------------------------------------------------------------*/
 body {
-  background-color: #f5f5f5;
+  background-color: #5a5a5a;
   color: #ffffff;
 }
 
@@ -23,12 +23,12 @@ h6 {
 }
 
 a {
-  color: #1e1e1e;
+  color: #ffffff;
   transition: all 0.5s ease-in-out;
 }
 
 a:hover {
-  color: #0078ff;
+  color: #ffffff;
   text-decoration: none;
   transition: all 0.5s ease-in-out;
 }
@@ -81,6 +81,14 @@ a:hover {
   background-attachment: fixed;
   background-size: cover;
   background-position: center center;
+}
+
+.construction {
+  background-image: url(https://portail-sla.fr/wp-content/uploads/2018/10/enconstruction.png);
+  z-index: 2;
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-attachment: local;
 }
 
 @media (max-width: 1024px) {
@@ -519,7 +527,7 @@ a:hover {
 
 .navbar-b.navbar-reduce {
   transition: all .5s ease-in-out;
-  background-color: #282828;
+  background-color: #282828ce;
   padding-top: 15px;
   padding-bottom: 15px;
 }
@@ -765,6 +773,29 @@ a:hover {
   margin-bottom: 2rem;
 }
 
+.btn-cv {
+  font-family: "Poppins", sans-serif;
+  text-transform: uppercase;
+  font-weight: 400;
+  font-size: 13px;
+  letter-spacing: 1px;
+  display: inline-block;
+  padding: 8px 30px 9px 30px;
+  border-radius: 50px;
+  transition: 0.5s;
+  border: 2px solid #fff;
+  color: #fff;
+  margin-right: auto;
+  justify-content: center;
+  display: flex;
+  width: 220px;
+}
+
+.btn-cv:hover {
+  background-color: #39b87d;
+  border-color: #39b87d;
+}
+
 .skill-mf span {
   color: #4e4e4e;
 }
@@ -935,10 +966,56 @@ a:hover {
 }
 
 /*--------------------------------------------------------------
-# Portfolio Details
+# Portfolio Details - Stage
 --------------------------------------------------------------*/
+.stage-intro {
+  background-color: black;
+}
+
+.map-stage img {
+  border-radius: 100%;
+  width: 500px;
+  height: 500px;
+}
+.photo-batiment-stage {
+  position: absolute;
+  right: 20px;
+  top: 50%;
+  transform: translate(0px, -50%);
+}
+.photo-batiment-stage img{
+  border-radius: 100%;
+  width: 300px;
+  height: 300px;
+}
+
+.ligne-map {
+  position: absolute;
+  top: 50%;
+  transform: translate(0px, -50%);
+  right: 100px;
+  width: 550px;
+  height: 2px;
+  background-color: #0078ff;
+  margin: 0 auto;
+  z-index: -1;
+}
+
 .portfolio-details {
   padding-top: 30px;
+}
+
+.portfolio-details h3 {
+  font-size: 22px;
+}
+
+.portfolio-details h4 {
+  font-size: 20px;
+  margin-bottom: 0;
+}
+
+.portfolio-description .portfolio-details-container h3 {
+  display: inline;
 }
 
 .portfolio-details .portfolio-details-container {
@@ -970,15 +1047,14 @@ a:hover {
 
 .portfolio-details .portfolio-info {
   padding: 30px;
-  position: absolute;
   right: 0;
   bottom: -70px;
-  background: #fff;
+  background: rgb(57, 57, 57);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   z-index: 2;
 }
 
-.portfolio-details .portfolio-info h3 {
+.portfolio-details .portfolio-info h2 {
   font-size: 22px;
   font-weight: 700;
   margin-bottom: 20px;
@@ -997,7 +1073,7 @@ a:hover {
 }
 
 .portfolio-details .portfolio-description {
-  padding-top: 50px;
+  padding-top: 20px;
 }
 
 .portfolio-details .portfolio-description h2 {
@@ -1011,6 +1087,13 @@ a:hover {
   padding: 0 0 0 0;
 }
 
+@media (max-width: 992px) {
+  
+  .portfolio-details .photo-batiment-stage{
+    right: 0px;
+  }
+}
+
 @media (max-width: 768px) {
   .portfolio-details .portfolio-description h2 {
     width: 100%;
@@ -1019,8 +1102,51 @@ a:hover {
     position: static;
     margin-top: 30px;
   }
+
+  .portfolio-description .map-stage img {
+    height: 400px;
+    width: 400px;
+  }
+
+  .portfolio-description .map-stage {
+    text-align: center;
+  }
+
+  .photo-batiment-stage {
+    position:initial;
+    right: auto;
+    top: auto;
+    text-align: center;
+    transform: none;
+  }
+
+  .portfolio-details .ligne-map {
+    position: unset;
+    width: 2px;
+    height: 100px;
+    background-color: #0078ff;
+    z-index: -1;
+    margin: 0 auto;
+    transform: none;
+  }
 }
 
+.img-parc-informatique img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.img-parc-informatique {
+  text-align: center;
+  padding-top: 15px;
+}
+
+
+.img-devops img{
+  height: auto;
+  max-width: 200px;
+}
 /*--------------------------------------------------------------
 # Testimonials
 --------------------------------------------------------------*/
@@ -1194,13 +1320,17 @@ a:hover {
 }
 
 /*--------------------------------------------------------------
-# Blog
+# Stages (Blog)
 --------------------------------------------------------------*/
 @media (min-width: 767px) {
   .card-blog {
     margin-bottom: 3rem;
   }
 }
+ .card {
+   background-color: rgb(39, 39, 39);
+   height: 470px;
+ }
 
 .card-blog .card-body {
   position: relative;
@@ -1240,7 +1370,7 @@ a:hover {
 }
 
 .card-blog .card-description {
-  color: #4e4e4e;
+  color: #9fbbaa;
 }
 
 .card-blog .post-author {
@@ -1248,7 +1378,7 @@ a:hover {
 }
 
 .card-blog .post-date {
-  color: #4e4e4e;
+  color: #9fbbaa;
   display: inline-block;
   float: right;
 }
