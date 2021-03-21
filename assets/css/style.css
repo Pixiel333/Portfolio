@@ -27,6 +27,10 @@ a {
   transition: all 0.5s ease-in-out;
 }
 
+strong {
+  color: #39b87d;
+}
+
 a:hover {
   color: #ffffff;
   text-decoration: none;
@@ -146,6 +150,10 @@ a:hover {
   font-weight: 600;
   color: #ffffff;
   font-size: 1.1rem;
+}
+
+.title-s-color {
+  color: #39b87d;
 }
 
 /*--/ Title A /--*/
@@ -459,13 +467,13 @@ a:hover {
 
 .navbar-b.navbar-trans .nav-item, .navbar-b.navbar-reduce .nav-item {
   position: relative;
-  padding-right: 10px;
+  padding-right: 7px;
   padding-left: 0;
 }
 
 @media (min-width: 768px) {
   .navbar-b.navbar-trans .nav-item, .navbar-b.navbar-reduce .nav-item {
-    padding-left: 8px;
+    padding-left: 6px;
   }
 }
 
@@ -650,6 +658,10 @@ a:hover {
   color: #fff;
 }
 
+.intro strong {
+  color: white;
+}
+
 #particles-js {
   background-color: black;
   position: fixed;
@@ -809,12 +821,13 @@ a:hover {
 
 .skill-mf .progress .progress-bar {
   height: .7rem;
-  background-color: #0078ff;
+  background-color: #39b87d;
 }
 
 .resume-item {
   margin-top: -2px;
-  border-left: 2px solid #0563bb;
+  border-left: 2px solid #2e7353;
+  ;
   position: relative;
 }
 
@@ -827,7 +840,7 @@ a:hover {
   left: -9px;
   top: 0;
   background: rgb(39, 39, 39);
-  border: 2px solid #0563bb;
+  border: 2px solid #39b87d;
 }
 
 .resume-item .title-s {
@@ -835,9 +848,32 @@ a:hover {
   padding-left: 15px;
 }
 
+.resume-title {
+  font-size: 26px;
+  font-weight: 700;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: #fff;
+}
+
+.resume-item h4 {
+  font-size: 16px;
+  background: rgba(255, 255, 255, 0.15);
+  padding: 5px 15px;
+  display: inline-block;
+  font-weight: 600;
+  margin-bottom: 10px;
+  margin-left: 10px;
+}
+
 .resume-item ul {
   line-height: 2;
 }
+
+.resume-item em {
+  margin-left: 10px;
+}
+
 @media (max-width: 992px) {
   .pb-20 {
     padding-bottom: 20px;
@@ -846,6 +882,14 @@ a:hover {
 /*--------------------------------------------------------------
 # Services
 --------------------------------------------------------------*/
+.resume-first {
+  padding-bottom: 20px;
+}
+
+.services-mf .resume-item::before{
+  background: #39b87d;
+}
+
 .service-box {
   background-color: #fff;
   padding: 2.5rem 1.3rem;
@@ -1137,7 +1181,20 @@ a:hover {
   border-radius: 10px;
 }
 
-.img-parc-informatique {
+.img-bureau-stage img {
+  max-width: 450px;
+  width: 100%;
+  height: auto;
+  border-radius: 20px;
+}
+
+.img-citeInternational img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.img-parc-informatique .img-bureau-stage {
   text-align: center;
   padding-top: 15px;
 }
@@ -1146,6 +1203,17 @@ a:hover {
 .img-devops img{
   height: auto;
   max-width: 200px;
+}
+
+.stage-securite-img {
+  position: relative;
+  align-items: center;
+  padding-left: 15px;
+}
+
+.stage-securite-img img {
+  position: absolute;
+  transform: translate(170%);
 }
 /*--------------------------------------------------------------
 # Testimonials
