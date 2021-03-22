@@ -10,7 +10,7 @@
 --------------------------------------------------------------*/
 body {
   background-color: #5a5a5a;
-  color: #ffffff;
+  color: #fdfdfd;
 }
 
 h1,
@@ -19,11 +19,11 @@ h3,
 h4,
 h5,
 h6 {
-  color: #ffffff;
+  color: #fdfdfd;
 }
 
 a {
-  color: #ffffff;
+  color: #fdfdfd;
   transition: all 0.5s ease-in-out;
 }
 
@@ -32,7 +32,7 @@ strong {
 }
 
 a:hover {
-  color: #ffffff;
+  color: #fdfdfd;
   text-decoration: none;
   transition: all 0.5s ease-in-out;
 }
@@ -138,7 +138,7 @@ a:hover {
 
 .sect-pt4 {
   padding-top: 4rem;
-  background-color: rgb(44, 44, 44);
+  background-color: rgba(44, 44, 44, 0.925);
 }
 
 .sect-mt4 {
@@ -148,7 +148,7 @@ a:hover {
 /*--/ Title s /--*/
 .title-s {
   font-weight: 600;
-  color: #ffffff;
+  color: #fdfdfd;
   font-size: 1.1rem;
 }
 
@@ -167,6 +167,12 @@ a:hover {
   text-transform: uppercase;
 }
 
+@media (max-width: 576px) {
+  .title-a {
+    font-size: 2rem;
+  }
+}
+
 .subtitle-a {
   color: #4e4e4e;
 }
@@ -174,7 +180,7 @@ a:hover {
 .line-mf {
   width: 40px;
   height: 5px;
-  background-color: #0078ff;
+  background-color: #39b87d;
   margin: 0 auto;
 }
 
@@ -192,7 +198,7 @@ a:hover {
   content: '';
   position: absolute;
   height: 3px;
-  background-color: #0078ff;
+  background-color: #39b87d;
   width: 100px;
   bottom: -12px;
 }
@@ -231,15 +237,15 @@ a:hover {
   height: 40px;
   width: 40px;
   font-size: 1.7rem;
-  border-radius: 50%;
+  border-radius: 26%;
   line-height: 1.4;
   margin: 0 15px 0 0;
-  box-shadow: 0 0 0 3px #0078ff;
+  box-shadow: 0 0 0 3px #39b87d;
   transition: all 500ms ease;
 }
 
 .socials .ico-circle:hover {
-  background-color: #0078ff;
+  background-color: #39b87d;
   color: #fff;
   box-shadow: 0 0 0 3px #cde1f8;
   transition: all 500ms ease;
@@ -266,11 +272,11 @@ a:hover {
   height: 100px;
   width: 100px;
   font-size: 2rem;
-  border-radius: 50%;
-  line-height: 1.55;
+  border-radius: 26%;
+  line-height: 1.75;
   margin: 0 auto;
   text-align: center;
-  box-shadow: 0 0 0 10px #0078ff;
+  box-shadow: 0 0 0 10px #39b87d;
   display: block;
 }
 
@@ -315,7 +321,7 @@ a:hover {
   position: fixed;
   width: 42px;
   height: 42px;
-  background-color: #0078ff;
+  background-color: #39b87d;
   opacity: .7;
   font-size: 1.6rem;
   line-height: 1.5;
@@ -333,7 +339,7 @@ a:hover {
 .back-to-top {
   position: fixed;
   display: none;
-  background: #0078ff;
+  background: #39b87d;
   color: #fff;
   width: 44px;
   height: 44px;
@@ -541,7 +547,7 @@ a:hover {
 }
 
 .navbar-b.navbar-reduce .nav-link {
-  color: #ffffff;
+  color: #fdfdfd;
 }
 
 .navbar-b.navbar-reduce .nav-link:before {
@@ -560,11 +566,11 @@ a:hover {
 }
 
 .navbar-b.navbar-reduce .navbar-brand {
-  color: #ffffff;
+  color: #fdfdfd;
 }
 
 .navbar-b.navbar-reduce .navbar-toggler span {
-  background-color: #1B1B1B;
+  background-color: #fdfdfd;
 }
 
 .navbar-b .navbar-brand {
@@ -785,6 +791,16 @@ a:hover {
   margin-bottom: 2rem;
 }
 
+.about-icon {
+  display: flex;
+  align-items: center;
+  margin-left: -10%;
+}
+
+.about-icon ion-icon {
+  margin-right: 7px;
+}
+
 .btn-cv {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
@@ -831,6 +847,9 @@ a:hover {
   position: relative;
 }
 
+.skill-mf .resume-item ul {
+  list-style: none;
+}
 .resume-item::before {
   content: "";
   position: absolute;
@@ -891,7 +910,7 @@ a:hover {
 }
 
 .service-box {
-  background-color: #fff;
+  background-color: #1a1a1a8f;
   padding: 2.5rem 1.3rem;
   border-radius: 1rem;
   margin-bottom: 3rem;
@@ -900,13 +919,13 @@ a:hover {
 .service-box:hover .ico-circle {
   transition: all 500ms ease;
   color: #fff;
-  background-color: #0078ff;
-  box-shadow: 0 0 0 10px #cde1f8;
+  background-color: #39b87d;
+  box-shadow: 0 0 0 10px #39b87d;
 }
 
 .service-box .service-ico {
   margin-bottom: 1rem;
-  color: #1e1e1e;
+  color: #fdfdfd;
 }
 
 .service-box .ico-circle {
@@ -922,7 +941,7 @@ a:hover {
 }
 
 .service-box .s-description {
-  color: #4e4e4e;
+  color: #fdfdfd;
 }
 
 /*--------------------------------------------------------------
@@ -1040,7 +1059,7 @@ a:hover {
   right: 100px;
   width: 550px;
   height: 2px;
-  background-color: #0078ff;
+  background-color: #39b87d;
   margin: 0 auto;
   z-index: -1;
 }
@@ -1419,7 +1438,7 @@ a:hover {
   color: #fff;
   padding: 0 15px 5px;
   overflow: hidden;
-  background-color: #0078ff;
+  background-color: #32845d;
   border-radius: 4px;
 }
 
@@ -1449,6 +1468,29 @@ a:hover {
   color: #9fbbaa;
   display: inline-block;
   float: right;
+}
+
+.card-blog img {
+  border-radius: 10px 10px 0px 0px;
+}
+.card-blog {
+  transition: all 0.33s ease-in-out;
+  border-radius: 10px;
+}
+
+.card-blog:hover {
+  border: 1px solid #00ef1c;
+  transform: translateY(-20px);
+  transition: all 0.33s ease-in-out;
+}
+
+/*--------------------------------------------------------------
+# Veille
+--------------------------------------------------------------*/
+.title-a-veille {
+  font-size: 2.5rem;
+  font-weight: bold;
+  text-transform: uppercase;
 }
 
 /*--------------------------------------------------------------

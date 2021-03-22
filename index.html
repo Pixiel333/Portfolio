@@ -52,7 +52,7 @@
             <a class="nav-link js-scroll" href="#about">A-propos</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="#service">Parcours</a>
+            <a class="nav-link js-scroll" href="#parcours">Parcours</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll" href="#stages">Stages</a>
@@ -67,9 +67,6 @@
       </div>
     </div>
   </nav>
-  <!--<div id="particles-js">
-    <canvas class="particles-js-canvas-el" width="2543" height="1333" style="width: 100%; height: 100%;"></canvas>
-  </div>-->
   <!-- ======= Intro Section ======= -->
   <div id="home" class="intro route bg-image">
     <div class="overlay-itro"></div>
@@ -117,12 +114,30 @@
                         <div class="resume-item pb-20">
                           <p class="title-s">Hard Skill</p>
                           <ul>
-                            <li>HTML & CSS</li>
-                            <li>C#, Java, Python</li>
-                            <li>SQL & PHP</li>
-                            <li>PowerShell</li>
-                            <li>Administration Linux</li>
-                            <li>Nmap, Metasploit, Kali Linux</li>
+                            <div class="about-icon">
+                              <ion-icon name="logo-html5"></ion-icon>
+                              <li>HTML & CSS</li>
+                            </div>
+                            <div class="about-icon">
+                              <ion-icon name="code-outline"></ion-icon>
+                              <li>C#, Java, Python</li>
+                            </div>
+                            <div class="about-icon">
+                              <ion-icon name="server-outline"></ion-icon>
+                              <li>SQL & PHP</li>
+                            </div>
+                            <div class="about-icon">
+                              <ion-icon name="logo-windows"></ion-icon>
+                              <li>PowerShell</li>
+                            </div>
+                            <div class="about-icon">
+                              <ion-icon src="assets/vendor/ionicons/fonts/debian.svg"></ion-icon>
+                              <li>Administration Linux</li>
+                            </div>
+                            <div class="about-icon">
+                              <ion-icon src="assets/vendor/ionicons/fonts/kali-linux.svg"></ion-icon>
+                              <li>Nmap, Metasploit, Kali Linux</li>
+                            </div>
                           </ul>
                         </div>
                         <!-- 
@@ -150,11 +165,26 @@
                         <div class="resume-item">
                           <p class="title-s">Soft Skill</p>
                           <ul>
-                            <li>Apprentissage rapide</li>
-                            <li>Motivé</li>
-                            <li>Curieux</li>
-                            <li>Observateur</li>
-                            <li>Sociable</li>
+                            <div class="about-icon">
+                              <ion-icon name="flash-outline"></ion-icon>
+                              <li>Apprentissage rapide</li>
+                            </div>
+                            <div class="about-icon">
+                              <ion-icon name="cafe-outline"></ion-icon>
+                              <li>Motivé</li>
+                            </div>
+                            <div class="about-icon">
+                              <ion-icon name="bulb-outline"></ion-icon>
+                              <li>Curieux</li>
+                            </div>
+                            <div class="about-icon">
+                              <ion-icon name="search-outline"></ion-icon>
+                              <li>Observateur</li>
+                            </div>
+                            <div class="about-icon">
+                              <ion-icon name="chatbubbles-outline"></ion-icon>
+                              <li>Sociable</li>
+                            </div>
                           </ul>
                         </div>
                       </div>
@@ -192,7 +222,7 @@
     </section>
     <!-- End About Section -->
     <!-- ======= Services Section ======= -->
-    <section id="service" class="services-mf paralax-mf pt-5 route">
+    <section id="parcours" class="services-mf paralax-mf pt-5 route">
       <div class="container">
         <div class="overlay-mf "></div>
         <div class="row">
@@ -352,20 +382,20 @@
         <div class="row">
           <div class="col-md-4">
             <div class="card card-blog">
-              <div class="card-img">
-                <a href="stages-comEtCompany.html"><img src="assets/img/cometcompany.jpg" alt="" class="img-fluid"></a>
-              </div>
-              <div class="card-body">
-                <div class="card-category-box">
-                  <div class="card-category">
-                    <h6 class="category">Com & Company</h6>
+              <a href="stages-comEtCompany.html"><img src="assets/img/cometcompany.jpg" alt="" class="img-fluid">
+                <div class="card-img"></div>
+                <div class="card-body">
+                  <div class="card-category-box">
+                    <div class="card-category">
+                      <h6 class="category">Com & Company</h6>
+                    </div>
                   </div>
+                  <h3 class="card-title">En savoir plus à propos de ce stage</h3>
+                  <p class="card-description">
+                    Stage réalisé du 26 Octobre 2020 au 18 Décembre 2020. J'ai réalisé ce stage dans le service infrastructure de l'entreprise Com & Company.
+                  </p>
                 </div>
-                <h3 class="card-title"><a href="stages-comEtCompany.html">En savoir plus à propos de ce stage</a></h3>
-                <p class="card-description">
-                  Stage réalisé du 26 Octobre 2020 au 18 Décembre 2020. J'ai réalisé ce stage dans le service infrastructure de l'entreprise Com & Company.
-                </p>
-              </div>
+              </a>
             </div>
           </div>
           <div class="col-md-4">
@@ -805,6 +835,11 @@
   <!-- Particle js-->
   <script type="text/javascript" src="assets/js/particles.min.js"></script>
   <script type="text/javascript" src="assets/js/app.js"></script>
+
+
+  <!-- Ionicons -->
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
+
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
