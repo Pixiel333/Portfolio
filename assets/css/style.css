@@ -912,8 +912,10 @@ a:hover {
 .service-box {
   background-color: #1a1a1a8f;
   padding: 2.5rem 1.3rem;
+  padding-bottom: 0;
   border-radius: 1rem;
   margin-bottom: 3rem;
+  min-height: 370px;
 }
 
 .service-box:hover .ico-circle {
@@ -1066,6 +1068,13 @@ a:hover {
 
 .portfolio-details {
   padding-top: 30px;
+  font-size: 1.25rem;
+  font-weight: 300;
+  
+}
+
+.portfolio-details h2 {
+  padding-top: 15px;
 }
 
 .portfolio-details h3 {
@@ -1128,7 +1137,7 @@ a:hover {
 .portfolio-details .portfolio-info ul {
   list-style: none;
   padding: 0;
-  font-size: 15px;
+  font-size: 20px;
 }
 
 .portfolio-details .portfolio-info ul li + li {
@@ -1155,6 +1164,14 @@ a:hover {
   .portfolio-details .photo-batiment-stage{
     right: 0px;
   }
+
+  .img-devops img {
+    display: none;
+  }
+
+  .img-devops .devops-par {
+    max-width: none;
+  }
 }
 
 @media (max-width: 768px) {
@@ -1167,8 +1184,8 @@ a:hover {
   }
 
   .portfolio-description .map-stage img {
-    height: 400px;
-    width: 400px;
+    height: 300px;
+    width: 300px;
   }
 
   .portfolio-description .map-stage {
@@ -1218,10 +1235,29 @@ a:hover {
   padding-top: 15px;
 }
 
+.list-icon {
+  list-style-type: none;
+  line-height: 2;
+}
 
+.list-icon .about-icon {
+  margin-left: -3%;
+}
+
+.img-devops {
+  position: relative;
+  align-items: center;
+  padding-left: 15px;
+}
+
+.img-devops p {
+  max-width: 600px;
+}
 .img-devops img{
   height: auto;
   max-width: 200px;
+  position: absolute;
+  transform: translate(350%);
 }
 
 .stage-securite-img {
@@ -1414,9 +1450,16 @@ a:hover {
     margin-bottom: 3rem;
   }
 }
+
+@media (max-width: 767px) {
+  .card-blog {
+    margin-bottom: 20px;
+  }
+}
+
  .card {
    background-color: rgb(39, 39, 39);
-   height: 470px;
+   min-height: 460px;
  }
 
 .card-blog .card-body {
@@ -1487,10 +1530,19 @@ a:hover {
 /*--------------------------------------------------------------
 # Veille
 --------------------------------------------------------------*/
+#veille {
+  font-size: 1.25rem;
+  font-weight: 300;
+}
+
 .title-a-veille {
   font-size: 2.5rem;
   font-weight: bold;
   text-transform: uppercase;
+}
+
+.service-box p {
+  font-size: initial;
 }
 
 /*--------------------------------------------------------------

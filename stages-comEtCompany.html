@@ -93,12 +93,19 @@
         <div class="portfolio-details-container">
           <div class="portfolio-info">
             <h2>Mon stage en tant que devops</h2>
-            <ul>
-              <li><strong>Entreprise</strong> : Com & Company</li>
-              <li><strong>Lieu</strong> : Lyon</li>
-              <li><strong>Date</strong>: 26 Octobre au 18 Décembre 2020</li>
-              <li><strong>Service</strong> : Service Infrastructure</li>
-            </ul>
+            <div class="row">
+              <div class="col-lg-5">
+                <ul>
+                  <li><strong>Entreprise</strong> : Com & Company</li>
+                  <li><strong>Lieu</strong> : Lyon</li>
+                  <li><strong>Date</strong>: 26 Octobre au 18 Décembre 2020</li>
+                  <li><strong>Service</strong> : Service Infrastructure</li>
+                </ul>
+              </div>
+              <div class="col-lg-7 text-center">
+              <ion-icon src="assets/vendor/ionicons/fonts/com-et-company.svg" style="font-size: 128px;"></ion-icon>
+            </div>
+            </div>
           </div>
           <h2>Contexte</h2>
           <div class="portfolio-description">
@@ -178,22 +185,45 @@
             </div>
         </div>
         <h2>Travail effectué</h2>
-        <div class="row">
-          <div class="col-8">
-            <p>
-              Pendant ma période de stage j’ai pu produire de nombreuses choses et pu découvrir le monde du travail dans le métier de DevOps qui mélange réseau et développement. <br>
-              Voici les différentes tâches que j’ai pu effectuer durant mes deux mois de stage :
-            </p>
-            <ul>
-
-            </ul>
-          </div>
-          <div class="col-4">
-            <div class="img-devops">
-              <img src="assets/img/devops.png" width="80%" alt="">
-            </div>
-          </div>
+        <div class="row img-devops">
+          <p class="devops-par">
+            Pendant ma période de stage j’ai pu produire de nombreuses choses et pu découvrir le monde du travail dans le métier de <strong>DevOps</strong> qui mélange réseau et développement.
+          </p>
+          <p class="devops-par">
+            Voici les différentes tâches que j’ai pu effectuer durant mes deux mois de stage :
+          </p>
+            <img src="assets/img/devops.png" width="80%" alt="">
         </div>
+        <ul class="list-icon lead">
+          <div class="about-icon">
+            <strong><ion-icon name="call-outline"></ion-icon></strong>
+            <li>Support téléphonique</li>
+          </div>
+          <div class="about-icon">
+            <ion-icon name="ticket-outline"></ion-icon>
+            <li>Création et résolution de tickets avec GLPI</li>
+          </div>
+          <div class="about-icon">
+            <ion-icon name="desktop-outline"></ion-icon>
+            <li>Dépannage au sein de l’entreprise & à distance</li>
+          </div>
+          <div class="about-icon">
+            <ion-icon name="terminal-outline"></ion-icon>
+            <li>Créations de scripts PowerShell</li>
+          </div>
+          <div class="about-icon">
+            <ion-icon name="lock-closed-outline"></ion-icon>
+            <li>Scan et recherches de failles</li>
+          </div>
+          <div class="about-icon">
+            <ion-icon name="laptop-outline"></ion-icon>
+            <li>Création d’une application</li>
+          </div>
+          <div class="about-icon">
+            <ion-icon name="server-outline"></ion-icon>
+            <li>Création de serveurs</li>
+          </div>
+        </ul>
         <div class="container">
           <div class="row">
             <p>
@@ -274,6 +304,9 @@
   <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/venobox/venobox.min.js"></script>
+
+  <!-- Ionicons -->
+  <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
