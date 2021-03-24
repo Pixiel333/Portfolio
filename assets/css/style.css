@@ -1037,8 +1037,21 @@ a:hover {
 /*--------------------------------------------------------------
 # Portfolio Details - Stage
 --------------------------------------------------------------*/
+#three-js-net {
+    background-color: black;
+    position: fixed;
+    height: 100%;
+    width: 100%;
+    top: 0;
+    z-index: -2;
+    background-image: url(assets//img/landing-pattern.png);
+}
+
+.fond-stage {
+  background-color: #0f0f0fc9;
+}
 .stage-intro {
-  background-color: black;
+  background-color: rgba(0, 0, 0, 0.898);
 }
 
 .map-stage img {
@@ -1118,16 +1131,17 @@ a:hover {
 }
 
 .portfolio-details .portfolio-details-carousel .owl-dot.active {
-  background-color: #0078ff !important;
+  background-color: #39b87d !important;
 }
 
 .portfolio-details .portfolio-info {
   padding: 30px;
   right: 0;
   bottom: -70px;
-  background: rgb(57, 57, 57);
+  background: rgb(28 28 28 / 89%);
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
   z-index: 2;
+  border-radius: 10px;
 }
 
 .portfolio-details .portfolio-info h2 {
