@@ -373,7 +373,7 @@ a:hover {
   bottom: 0;
   z-index: 9999;
   overflow: hidden;
-  background: #fff;
+  background: rgb(0, 0, 0);
 }
 
 #preloader:before {
@@ -381,8 +381,8 @@ a:hover {
   position: fixed;
   top: calc(50% - 30px);
   left: calc(50% - 30px);
-  border: 6px solid #f2f2f2;
-  border-top: 6px solid #0078ff;
+  border: 6px solid #000000;
+  border-top: 6px solid #39b87d;
   border-radius: 50%;
   width: 60px;
   height: 60px;
@@ -1044,7 +1044,6 @@ a:hover {
     width: 100%;
     top: 0;
     z-index: -2;
-    background-image: url(assets//img/landing-pattern.png);
 }
 
 .fond-stage {
