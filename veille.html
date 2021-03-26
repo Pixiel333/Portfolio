@@ -87,15 +87,17 @@
                     </div>
                 </div>
             </div>
-            <div class="portfolio-description text-center">
+            <div class="veille-description text-center">
               <p>
                 Depuis déjà <strong><span id="anneesVeille"></span> ans</strong> je m'interesse à la cybersécurité et au hacking. J'ai commencé avec de petits hacking d'ordinateurs, 
                 puis je me suis interessé au <strong>pentesting</strong> et enfin à la cybersécurité. 
-                Pour cela j'utilise différents outils et sources d'informations pour en apprendre plus et ainsi me spécialiser dans ce domaine.
+                Pour cela j'utilise différents outils et sources d'informations pour en apprendre plus et ainsi me spécialiser dans ce domaine. Pour en apprendre 
+                plus et rester au courant je m'entraine et me documente <strong>1 à 2 fois</strong> par semaine.
               </p>
             </div>
-            <div class="portfolio-description pt-40 text-center">
+            <div class="veille-description pt-40 text-center">
                 <h2>Outils de veille</h2>
+                <div class="line-mf pb-20"></div>
             </div>
             <div class="row">
             <div class="col-md-4">
@@ -165,7 +167,9 @@
                   <div class="service-content">
                     <h2 class="s-title">PeerTube</h2>
                     <p class="s-description text-center">
-                      PeerTube est un logiciel libre d'hébergement de vidéo. Cela permet d'avoir une alternative aux platformes comme Youtube
+                      PeerTube est un logiciel libre d'<strong>hébergement de vidéo</strong>. Cela permet d'avoir une <strong>alternative</strong> aux plates-formes comme <strong>Youtube</strong>. 
+                      On peu donc visionner des vidéos de hacking qui seraient non disponibles sur Youtube pour cause de non-respect
+                      de ses conditions.
                     </p>
                   </div>
                 </div>
@@ -178,17 +182,17 @@
                   <div class="service-content">
                     <h2 class="s-title">Sites Web</h2>
                     <p class="s-description text-center">
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
-                      provident vitae! Magni
-                      tempora perferendis eum non provident.
+                      De nombreux sites web permettent de s'informer sur le hacking. Il existe de nombreuses <strong>documentation</strong> en ligne et 
+                      de <strong>tutos</strong> permettant d'augmenter ses comptécences en hacking et cybersécurité. 
                     </p>
                   </div>
                 </div>
               </div>
             </div>
-            <div class="portfolio-description pt-20">
+            <div class="veille-description pt-20">
               <div class="text-center">
-                <h2>Méthodes de veille</h2>
+                <h2>Utilisation des outils</h2>
+                <div class="line-mf pb-20"></div>
               </div>
                 <h3>Outils utilisés</h3>
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis corrupti veritatis facilis est repudiandae recusandae id nisi ipsa, nihil sit debitis fugiat vitae doloremque sed culpa accusamus explicabo ipsam rerum.</p>
@@ -202,6 +206,34 @@
         </div>
       </section><!-- End Portfolio Section -->
     </main>
+
+    <!-- Kali -->
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/egg.js/1.0/egg.min.js"></script>
+    <script>
+      var egg = new Egg("k,a,l,i,l,i,n,u,x", function() {
+        jQuery('#kali-linux').fadeIn(500, function() {
+          window.setTimeout(function() { jQuery('#kali-linux').hide(); }, 10000);
+        });
+      }).listen();
+    </script>
+    <div id="kali-linux" class="kali-linux" style="display: none;">
+      <div class="navbar-kali">
+        <a class="nav-text-kali">Applications <ion-icon name="caret-down-outline"></ion-icon></a>
+        <a class="nav-text-kali">Places <ion-icon name="caret-down-outline"></ion-icon></a>
+        <a class="nav-text-kali right-text"><ion-icon name="chatbox-outline"></ion-icon> root</a>
+        <a class="nav-text-kali right-text"><ion-icon src="assets/vendor/ionicons/fonts/network-wired-solid.svg"></ion-icon></a>
+        <a class="nav-text-kali right-text"><i id="volumen" class="fas fa-volume-mute"  style="color:grey;"></i></a>
+      </div>
+  
+      <div class="left-nav-kali text-center">
+        <p><img class="left-nav-item-kali" src="https://upload.wikimedia.org/wikipedia/ca/9/92/2000px-Google_Chrome_2011_logo.png"></p>
+        <p><img class="left-nav-item-kali" src="http://icons.iconarchive.com/icons/oxygen-icons.org/oxygen/256/Places-folder-icon.png"></p>
+        <p><img class="left-nav-item-kali" src="https://help.rapid7.com/metasploit/Content/images/background/metasploit.png"></p>
+        <p><img class="left-nav-item-kali" src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/da/GNOME_Terminal_icon_2019.svg/1024px-GNOME_Terminal_icon_2019.svg.png"></p>
+        <p><img class="left-nav-item-kali" src="https://www.aldeid.com/w/images/8/83/Armitage-logo.png"></p>
+        <p><ion-icon name="apps-outline"></ion-icon></p>
+      </div>
+    </div>
 
     <a href="#" class="back-to-top"><i class="fa fa-chevron-up"></i></a>
   <div id="preloader"></div>
