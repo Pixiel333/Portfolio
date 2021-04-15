@@ -49,7 +49,7 @@
                 <a class="nav-link js-scroll" href="/#stages">Stages</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link js-scroll active" href="/#page-top">Veille</a>
+                <a class="nav-link js-scroll active" href="#page-top">Veille</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link js-scroll" href="/#contact">Contact</a>
@@ -90,7 +90,7 @@
             </div>
             <div class="veille-description text-center">
               <p>
-                Depuis déjà <strong><span id="anneesVeille"></span> ans</strong> je m'interesse à la cybersécurité et au hacking. J'ai commencé avec de petits hacking d'ordinateurs, 
+                Depuis déjà <strong><span id="anneesVeille" class="counter"></span> ans</strong> je m'interesse à la cybersécurité et au hacking. J'ai commencé avec de petits hacking d'ordinateurs, 
                 puis je me suis interessé au <strong>pentesting</strong> et enfin à la cybersécurité. 
                 Pour cela j'utilise différents outils et sources d'informations pour en apprendre plus et ainsi me spécialiser dans ce domaine. Pour en apprendre 
                 plus et rester au courant je m'entraine et me documente <strong>1 à 2 fois</strong> par semaine.
@@ -101,22 +101,24 @@
                 <div class="line-mf"></div>
             </div>
             <div class="row">
-            <div class="col-md-6 col-lg-4">
-                <div class="service-box">
-                  <div class="service-ico">
-                    <span class="ico-circle"><ion-icon src="assets/vendor/ionicons/fonts/kali-linux.svg"></ion-icon></span>
+              <!-- == Kali Linux == -->
+              <div class="col-md-6 col-lg-4">
+                  <div class="service-box">
+                    <div class="service-ico">
+                      <span class="ico-circle"><ion-icon src="assets/vendor/ionicons/fonts/kali-linux.svg"></ion-icon></span>
+                    </div>
+                    <div class="service-content">
+                      <h2 class="s-title">Kali Linux</h2>
+                      <p class="s-description text-center">
+                        Kali Linux est une distribution GNU/Linux basée sur <strong>Debian</strong>.
+                        En cybersécurité Kali Linux est un outils indispensable. 
+                        Il est fournit avec de nombreux logiciels de sécurité permettant par exemple
+                        le <strong>test d'intrusion</strong> ou le <strong>cassage de mots de passe</strong>.
+                      </p>
+                    </div>
                   </div>
-                  <div class="service-content">
-                    <h2 class="s-title">Kali Linux</h2>
-                    <p class="s-description text-center">
-                      Kali Linux est une distribution GNU/Linux basée sur <strong>Debian</strong>.
-                      En cybersécurité Kali Linux est un outils indispensable. 
-                      Il est fournit avec de nombreux logiciels de sécurité permettant par exemple
-                       le <strong>test d'intrusion</strong> ou le <strong>cassage de mots de passe</strong>.
-                    </p>
-                  </div>
-                </div>
-            </div>
+              </div>
+              <!-- == Hack The Box == -->
               <div class="col-md-6 col-lg-4">
                 <div class="service-box">
                   <div class="service-ico">
@@ -132,6 +134,7 @@
                   </div>
                 </div>
               </div>
+              <!-- == Udemy == -->
               <div class="col-md-6 col-lg-4">
                 <div class="service-box">
                   <div class="service-ico">
@@ -146,6 +149,7 @@
                   </div>
                 </div>
               </div>
+              <!-- == Youtube == -->
               <div class="col-md-6 col-lg-4">
                 <div class="service-box">
                   <div class="service-ico">
@@ -160,6 +164,7 @@
                   </div>
                 </div>
               </div>
+              <!-- == Peertube == -->
               <div class="col-md-6 col-lg-4">
                 <div class="service-box">
                   <div class="service-ico">
@@ -175,6 +180,7 @@
                   </div>
                 </div>
               </div>
+              <!-- == Site Web == -->
               <div class="col-md-6 col-lg-4">
                 <div class="service-box">
                   <div class="service-ico">
@@ -212,7 +218,7 @@
                 <div class="row flex-row-reverse">
                   <div class="col-lg-6">
                     <p>
-                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi quibusdam officiis rem labore nostrum aperiam voluptatibus libero necessitatibus aliquam totam iste ab mollitia amet, sequi, magnam minima explicabo dolorum repudiandae?
+                      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum iste, id debitis animi dolor labore cumque odio unde placeat, facilis nulla minus velit veritatis dolores voluptatem nostrum recusandae ex in.
                     </p>
                     <div class="badge">
                     <a href="https://www.hackthebox.eu/home/users/profile/281391">
@@ -273,6 +279,16 @@
                 </div>
                 <hr>
                 <!-- == Site Web == -->
+                <div class="row flex-row-reverse">
+                  <div class="col-lg-6">
+                    <p>
+                      Lorem ipsum dolor sit amet consectetur adipisicing elit. Praesentium ex suscipit obcaecati eius veniam, necessitatibus ea placeat voluptate consequatur porro amet quisquam quis! Perferendis quasi excepturi corrupti necessitatibus nulla maxime.
+                    </p>
+                  </div>
+                  <div class="col-lg-6">
+                    <img class="animate-left" src="assets/img/blog-kali-fr.PNG" alt="le site internet kali-linux.fr">
+                  </div>
+                </div>
                 <!--<div class="veille-utilisation row">
                   <div class="col-md-6">
                     <p>
@@ -348,7 +364,7 @@
 
   <script type="text/javascript">
     var annee = document.getElementById('anneesVeille');
-    annee.textContent = getAge(new Date(2017, 01, 01)).toString();
+    annee.textContent = getAge(new Date("2017/01/01")).toString();
   </script>
 </body>
 </html>
