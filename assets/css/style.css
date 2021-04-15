@@ -1221,10 +1221,25 @@ a:hover {
     position: unset;
     width: 2px;
     height: 100px;
-    background-color: #0078ff;
+    background-color: #39b87d;
     z-index: -1;
     margin: 0 auto;
     transform: none;
+  }
+}
+
+@media (max-width: 500px) {
+
+  .portfolio-details .list-icon .about-icon {
+    margin-left: -10%;
+  }
+
+  .portfolio-details .about-icon ion-icon {
+    contain: unset;
+  }
+
+  .portfolio-details .about-icon .icon-inner {
+    width: 20px!important;
   }
 }
 
@@ -1572,6 +1587,50 @@ a:hover {
   }
 }
 
+.veille-content-utilisation {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  margin: auto;
+  height: 100%;
+}
+
+.veille-content-utilisation img {
+  max-width: 100%;
+}
+
+.veille-content-utilisation a:hover {
+  text-decoration: underline;
+}
+
+.veille-content-utilisation .row {
+  align-items: center;
+  padding-bottom: 40px;
+}
+.veille-content-utilisation hr {
+  margin-bottom: 56px;
+  width: 30%;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(28, 219, 129, 0.75), rgba(255, 255, 255, 0));
+}
+@media (min-width: 992px) {
+  .veille-content-utilisation img:not(.badge img), .veille-content-utilisation p:not(.badge p), .veille-content-utilisation iframe {
+    max-width: 90%;
+  }
+
+  .veille-content-utilisation .flex-row-reverse p:not(.badge p) {
+    margin-left: auto!important;
+  }
+
+  .veille-content-utilisation img:not(.badge img), .veille-content-utilisation iframe:not(.flex-row-reverse iframe) {
+    margin-left: 10%;
+  }
+  
+  .veille-content-utilisation .flex-row-reverse .badge {
+    margin-left: 9%;
+  }
+}
 /*--------------------------------------------------------------
 # Blog Single
 --------------------------------------------------------------*/
@@ -1819,7 +1878,7 @@ footer {
   text-align: center;
   color: #fff;
   padding: 25px 0;
-  background: #0062d3;
+  background: #0e0e0ee6;
 }
 
 footer .copyright {

@@ -151,6 +151,24 @@
     $('.venobox').venobox({
       'share': false
     });
-  });
 
+    //kali egg
+    var egg = new Egg("k,a,l,i,l,i,n,u,x", function() {
+      jQuery('#kali-linux').fadeIn(500, function() {
+        window.setTimeout(function() { jQuery('#kali-linux').hide("slow"); }, 10000);
+      });
+    }).listen();
+
+    //Scroll reveal
+    ScrollReveal({ distance: '800px' });
+    ScrollReveal().reveal('.animate-right',{ duration: 900, origin: 'right'});
+    ScrollReveal().reveal('.animate-left',{ duration: 900, origin: 'left'});
+  });
 })(jQuery);
+
+function getAge(date) { 
+  var diff = Date.now() - date.getTime();
+  var age = new Date(diff); 
+
+  return Math.abs(age.getUTCFullYear() - 1970);
+}
