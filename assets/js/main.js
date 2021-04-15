@@ -160,7 +160,7 @@
     }).listen();
 
     //Scroll reveal
-    ScrollReveal({ distance: '800px' });
+    ScrollReveal({ distance: '800px',  mobile: false });
     ScrollReveal().reveal('.animate-right',{ duration: 900, origin: 'right', mobile: false});
     ScrollReveal().reveal('.animate-left',{ duration: 900, origin: 'left', mobile: false});
   });
