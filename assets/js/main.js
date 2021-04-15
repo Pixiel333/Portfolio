@@ -50,7 +50,7 @@
   /*--/ Star Counter /--*/
   $('.counter').counterUp({
     delay: 15,
-    time: 2000
+    time: 1000
   });
 
   /*--/ Star Scrolling nav /--*/
@@ -167,8 +167,18 @@
 })(jQuery);
 
 function getAge(date) { 
-  var diff = Date.now() - date.getTime();
-  var age = new Date(diff); 
+  //var diff = Date.now() - date.getTime();
+  //var age = new Date(diff); 
 
-  return Math.abs(age.getUTCFullYear() - 1970);
+  //return Math.abs(age.getUTCFullYear() - 1970);
+  //return Math.abs(diff.getUTCFullYear());
+
+  var today = new Date();
+    var birthDate = new Date(date);
+    var age = today.getFullYear() - birthDate.getFullYear();
+    var m = today.getMonth() - birthDate.getMonth();
+    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age--;
+    }
+    return age;
 }

@@ -20,6 +20,8 @@
   <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
 
+  <script src="https://unpkg.com/scrollreveal"></script>
+
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
 
@@ -199,7 +201,7 @@
                       </h5>
                     </div>
                     <p class="lead">
-                      Je suis actuellement en seconde année de <strong>BTS SIO</strong> en option SLAM (Développeur).
+                      J'ai <strong><span id="age" class="counter"></span> ans</strong> et suis actuellement en seconde année de <strong>BTS SIO</strong> en option SLAM (Développeur).
                       Mon goût pour le voyage m’a rendu plus ouvert d’esprit et m’a aidé à acquérir
                       une facilité d’adaptation avec les autres.
                     </p>
@@ -831,19 +833,22 @@
   <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/venobox/venobox.min.js"></script>
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/egg.js/1.0/egg.min.js"></script>
 
   <!-- Particle js-->
   <script type="text/javascript" src="assets/js/particles.min.js"></script>
   <script type="text/javascript" src="assets/js/app.js"></script>
 
-
   <!-- Ionicons -->
   <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
-
 
   <!-- Template Main JS File -->
   <script src="assets/js/main.js"></script>
 
+  <script type="text/javascript">
+    var annee = document.getElementById('age');
+    annee.textContent = getAge(new Date("2001/03/17")).toString();
+  </script>
 </body>
 
 </html>
