@@ -10,6 +10,44 @@
   var nav = $('nav');
   var navHeight = nav.outerHeight();
 
+  // Initiate functions
+  $(document).ready(function() {
+    $('.venobox').venobox({
+      'share': false
+    });
+
+    function getAge(date) { 
+      var today = new Date();
+        var birthDate = new Date(date);
+        var age = today.getFullYear() - birthDate.getFullYear();
+        var m = today.getMonth() - birthDate.getMonth();
+        if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+            age--;
+        }
+        return age;
+    }
+    
+    //kali egg
+    var egg = new Egg("k,a,l,i,l,i,n,u,x", function() {
+      jQuery('#kali-linux').fadeIn(500, function() {
+        window.setTimeout(function() { jQuery('#kali-linux').hide("slow"); }, 10000);
+      });
+    }).listen();
+
+    //Scroll reveal
+    ScrollReveal({ distance: '800px',  mobile: false });
+    ScrollReveal().reveal('.animate-right',{ duration: 900, origin: 'right', mobile: false});
+    ScrollReveal().reveal('.animate-left',{ duration: 900, origin: 'left', mobile: false});
+
+    //age
+    var annee = document.getElementById('age');
+    annee.textContent = getAge(new Date("2001/03/17")).toString();
+
+    //annees veille
+    var annee2 = document.getElementById('anneesVeille');
+    annee2.textContent = getAge(new Date("2017/01/01")).toString();
+  });
+
   $('.navbar-toggler').on('click', function() {
     if (!$('#mainNav').hasClass('navbar-reduce')) {
       $('#mainNav').addClass('navbar-reduce');
@@ -146,39 +184,5 @@
     items: 1
   });
 
-  // Initiate venobox (lightbox feature used in portofilo)
-  $(document).ready(function() {
-    $('.venobox').venobox({
-      'share': false
-    });
-
-    //kali egg
-    var egg = new Egg("k,a,l,i,l,i,n,u,x", function() {
-      jQuery('#kali-linux').fadeIn(500, function() {
-        window.setTimeout(function() { jQuery('#kali-linux').hide("slow"); }, 10000);
-      });
-    }).listen();
-
-    //Scroll reveal
-    ScrollReveal({ distance: '800px',  mobile: false });
-    ScrollReveal().reveal('.animate-right',{ duration: 900, origin: 'right', mobile: false});
-    ScrollReveal().reveal('.animate-left',{ duration: 900, origin: 'left', mobile: false});
-  });
+  
 })(jQuery);
-
-function getAge(date) { 
-  //var diff = Date.now() - date.getTime();
-  //var age = new Date(diff); 
-
-  //return Math.abs(age.getUTCFullYear() - 1970);
-  //return Math.abs(diff.getUTCFullYear());
-
-  var today = new Date();
-    var birthDate = new Date(date);
-    var age = today.getFullYear() - birthDate.getFullYear();
-    var m = today.getMonth() - birthDate.getMonth();
-    if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
-        age--;
-    }
-    return age;
-}
