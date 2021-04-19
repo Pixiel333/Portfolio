@@ -41,7 +41,10 @@
 
     //age
     var annee = document.getElementById('age');
-    annee.textContent = getAge(new Date("2001/03/17")).toString();
+    if (annee !== null) {
+      annee.textContent = getAge(new Date("2001/03/17")).toString();
+    }
+    
 
     //annees veille
     var annee2 = document.getElementById('anneesVeille');

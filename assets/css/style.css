@@ -763,6 +763,8 @@ a:hover {
 /*--------------------------------------------------------------
 # About
 --------------------------------------------------------------*/
+
+
 .about-mf .box-shadow-full {
   padding-top: 4rem;
   padding-bottom: 4rem;
@@ -805,6 +807,11 @@ a:hover {
   margin-right: 7px;
 }
 
+.about-me a ion-icon {
+  font-size: 18px;
+}
+
+
 .btn-cv {
   font-family: "Poppins", sans-serif;
   text-transform: uppercase;
@@ -816,7 +823,7 @@ a:hover {
   border-radius: 50px;
   transition: 0.5s;
   border: 2px solid #fff;
-  color: #fff;
+  color: #39b87d;
   margin-right: auto;
   justify-content: center;
   display: flex;
@@ -826,6 +833,23 @@ a:hover {
 .btn-cv:hover {
   background-color: #39b87d;
   border-color: #39b87d;
+}
+
+.hvr-grow-shadow {
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: box-shadow, transform;
+  transition-property: box-shadow, transform;
+}
+
+.hvr-grow-shadow:hover, .hvr-grow-shadow:focus, .hvr-grow-shadow:active {
+  box-shadow: 0 10px 10px -10px rgba(0, 0, 0, 1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 .skill-mf span {
@@ -1038,12 +1062,12 @@ a:hover {
 # Portfolio Details - Stage
 --------------------------------------------------------------*/
 #three-js-net {
-    background-color: black;
-    position: fixed;
-    height: 100%;
-    width: 100%;
-    top: 0;
-    z-index: -2;
+  background-color: black;
+  position: fixed;
+  height: 100%;
+  width: 100%;
+  top: 0;
+  z-index: -2;
 }
 
 .fond-stage {
@@ -1306,15 +1330,37 @@ a:hover {
 /*--------------------------------------------------------------
 # Veille - Home
 --------------------------------------------------------------*/
+#veille-home {
+  padding-bottom: 4rem;
+}
+
 #veille-home .veille-home-info {
   font-size: 1.25rem;
   font-weight: 300;
   margin: 0 15%;
   padding-bottom: 20px;
+  border: 1px solid #1acb4a;
+  border-radius: 20px;
+  background-color: #00000024;
+}
+
+#veille-home .veille-home-info p {
+  margin-top: 10px;
+  margin: 10px 20px;
+}
+
+#veille-home .veille-home-info a {
+  transition: none;
+  color: #39b87d;
 }
 
 #veille-home .veille-home-info a:hover {
   text-decoration: underline;
+  transition: none;
+}
+
+#veille-home .veille-home-info ion-icon {
+  transform: translateY(4px);
 }
 
 /*--------------------------------------------------------------
@@ -1515,6 +1561,14 @@ a:hover {
   transition: all 0.33s ease-in-out;
 }
 
+.img-gedimat {
+  background-color: #f3f3f3;
+  height: 232px;
+}
+
+.img-gedimat img {
+  margin-top: 50px;
+}
 /*--------------------------------------------------------------
 # Veille
 --------------------------------------------------------------*/
