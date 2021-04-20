@@ -47,7 +47,7 @@
       <div class="navbar-collapse collapse justify-content-end" id="navbarDefault">
         <ul class="navbar-nav">
           <li class="nav-item">
-            <a class="nav-link js-scroll active" href="index.html">Accueil</a>
+            <a class="nav-link js-scroll" href="index.html">Accueil</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll" href="index.html#about">A-propos</a>
@@ -56,7 +56,7 @@
             <a class="nav-link js-scroll" href="index.html#service">Services</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link js-scroll" href="index.html#stages">Stages</a>
+            <a class="nav-link js-scroll active" href="#page-top">Stages</a>
           </li>
           <li class="nav-item">
             <a class="nav-link js-scroll" href="index.html#blog">Blog</a>
@@ -106,24 +106,6 @@
           backgroundColor: 0x0
         })
         </script>
-      <!--<script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r121/three.min.js"></script>
-      <script src="https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js"></script>
-      <script>
-        VANTA.NET({
-          el: "#three-js-net",
-          mouseControls: true,
-          touchControls: true,
-          gyroControls: true,
-          mminHeight: 200.00,
-          minWidth: 200.00,
-          scale: 1.00,
-          scaleMobile: 1.00,
-          color: 0x29bb95,
-          backgroundAlpha: 0,
-          maxDistance: 29.00,
-          spacing: 16.00
-        })
-        </script> -->
     </div>
     <!-- ======= Portfolio Details Section ======= -->
     <section class="portfolio-details fond-stage">
@@ -272,7 +254,7 @@
               Je n’ai pas eu au sens propre des missions, je vais juste regrouper par thèmes toutes les tâches que j’ai pu effectuer pendant mes 8 semaines de stage.
             </p>
           </div>
-      </div>
+        </div>
         <div class="portfolio-description">
           <div class="row stage-securite-img">
           <h3>Mission – Sécurité</h3>
@@ -287,7 +269,7 @@
           </p>
         </div>
         <div class="portfolio-description">
-          <h3>Outils utilisés</h3>
+          <h4>Outils utilisés</h3>
               <p>
                 <ul>
                   <li>Kali Linux</li>
@@ -297,12 +279,213 @@
               </p>
         </div>
         <div class="portfolio-description">
-          <h3></h3>
-          <p></p>
+          <h4>Réalisation</h3>
+          <p>
+            Pour commencer à pouvoir faire du pentest ou un scan, j’ai préalablement installé Kali Linux sur le 
+            VSphere interne de l’entreprise. Une fois l’installation fini, j’ai pu lancer un premier scan à l’aide de 
+            NMAP qui est déjà intégré dans Kali. Le scan fini, j’ai généré un rapport de scan qui permet d’identifier 
+            les services et ses versions qui tournent derrière les ports ouverts du contrôleur de domaine. Mais 
+            pour pousser le scan plus loin j’ai dû utiliser Nessus.
+          </p>
+          <p>
+            Nessus quant à lui est plus qu’un scanner de ports, c’est un outil de sécurité informatique qui signale 
+            les potentielles failles des machines testées. Mais en différence avec Nmap, Nessus n’est pas 
+            préalablement installé sur Kali Linux, il faut donc l’installer. Quand on lance un scan avec Nessus, il 
+            retourne un rapport détaillé de toutes les failles potentielles du système en question, de la plus à la 
+            moins critique.
+          </p>
+          <p>
+            L’interface de Nessus :
+          </p>
+          <img class="img-fluid" src="assets/img/nessus-interface.png" alt="Interface de Nessus">
+          <p>
+            A la fin j’ai présenté le rapport à mon maître de stage, montrant qu’il n’y avait aucune faille critique 
+            dans le contrôleur de domaine actuel de l’entreprise.
+          </p>
+          <img class="img-fluid" src="assets/img/nessus-rapport.png" alt="">
         </div>
         <div class="portfolio-description">
-          <h3></h3>
-          <p></p>
+          <h3 class="pb-4">Mission – Administration Active Directory</h3>
+          <h4>Problématique</h4>
+          <p>
+            Lors de mon arrivée dans l’entreprise de nombreuses actions pour administrer l’Active Directory 
+            étaient faites à la main. Comme par exemple le fait d’ajouter un nouvel utilisateur dans l’AD. De plus, 
+            il n’y avait pas d’interface graphique pour lancer ces scripts.
+          </p>
+        </div>
+        <div class="portfolio-description">
+          <h4>Outils utilisés</h4>
+          <ul>
+            <li>PowerShell</li>
+            <li>Visual Studio</li>
+            <li>PowerShell Universal</li>
+            <li>Git / Gogs</li>
+          </ul>
+        </div>
+        <div class="portfolio-description">
+          <h4>Réalisation</h4>
+          <p>
+            Tout d’abord ma mission a été de faire un script, codé en PowerShell, qui permettait d’ajouter un 
+            nouvel utilisateur dans l’AD. Une fois fini, j’ai dû créer un repos git sur un serveur git local appelé gogs
+          </p>
+          <p>
+            Après avoir fait cela j’ai dû créer de nombreux autres script PowerShell qui :
+          </p>
+          <ul>
+            <li>Ajoute une licence à un utilisateur</li>
+            <li>Créé un nouveau groupe dans l’AD</li>
+            <li>PowerShell Universal</li>
+            <li>Déplace les utilisateurs désactivés dans une OU Historique</li>
+          </ul>
+          <p>
+            A chaque fois que je terminais un script je devais le tester sur un AD de test qui était la copie conforme 
+            de celui qui était en fonction
+          </p>
+          <p>
+            Lors de la réalisation de mes scripts, j’ai pensé qu’il était mieux de pouvoir lancer le script pour ajouter 
+            un nouvel utilisateur dans l’AD depuis une interface graphique. J’ai donc commencé à coder une 
+            application en C# à l’aide de Visual Studio
+          </p>
+          <p>
+            Voici l’interface de mon application une 
+            fois fini :            
+          </p>
+          <img class="img-fluid" src="assets/img/stage-application.png" alt="">
+          <p>
+            Pour pouvoir installer cette application 
+            j’ai dû ajouter un installeur à ma solution 
+            sur Visual Studio
+          </p>
+          <p>
+            Quand mon application fonctionnait bien et que mon maitre de stage a appréciée l’idée d’avoir une 
+            interface graphique pour ce script, il m’a demandé de travailler sur PowerShell Universal. En effet, pour 
+            faire cette interface graphique j’ai mis pas mal de temps et sa modification, pour effectuer par exemple 
+            des mises à jour, est très complexe. Mais avec PowerShell Universal, lancer un script via une interface 
+            graphique n’est plus qu’un jeu d’enfant. Effectivement, PowerShell Universal créer automatiquement 
+            une interface graphique en fonction des scripts ajoutés, il suffit donc d’installer PowerShell Universal 
+            sur un Windows Server.                       
+          </p>
+          <p>
+            La première chose que j’ai dû faire, et de créer un Windows Server 2016 et d’y configurer un service 
+            IIS, afin d’héberger PowerShell Universal. Pour cela je me suis aidé de la doc officielle trouvable sur 
+            internet.            
+          </p>
+          <p>
+            Configuration site web sur le serveur IIS pour 
+            l’hébergement de PowerShell Universal :           
+          </p>
+          <img class="img-fluid" src="assets/img/stage-config-PU.png" alt="">
+          <p>
+            Une fois les configurations faites, j’ai pu coder en PowerShell le system de connexion sur l’interface 
+            web de PowerShell Universal, afin que seuls les administrateurs du domaine puissent s’y connecter.
+          </p>
+          <p>
+            Voici le rendu une fois connecté à l’interface web de PowerShell Universal. On peu y voir les différents 
+            scripts ajoutés et que l’on peut lancer.         
+          </p>
+          <img class="img-fluid" src="assets/img/stage-PU-interface.png" alt="">
+        </div>
+        <div class="portfolio-description">
+          <h3 class="pb-4">Mission – Automatisation de machine virtuels</h3>
+          <h4>Problématique</h4>
+          <p>
+            Lorsque l’on créé une machine virtuelle, il est utile de pouvoir automatiser sa création pour déployer 
+            plusieurs machines configurées de la même manière et pouvoir réinstaller une machine virtuelle très facilement.
+          </p>
+        </div>
+        <div class="portfolio-description">
+          <h4>Outils utilisés</h4>
+            <ul>
+              <li>Packer</li>
+              <li>Vagrant</li>
+              <li>Visual Studio Code</li>
+              <li>VirtualBox/VSphere</li>
+            </ul>
+        </div>
+        <div class="portfolio-description">
+          <h4>Réalisation</h4>
+          <p>
+            Tout d’abord, j’ai dû réaliser la création d’un serveur de réplication MySQL Master-Slave sur VirtualBox avec Packer. 
+            Packer est un outil open source qui permet de créer des images de machines à partir d’un fichier source, au format JSON 
+            (format que j’ai choisi dans mon cas). Pour pouvoir configurer le Master-Slave, j’ai codé en Bash et inclut ce fichier à Packer. 
+            Après avoir créer mon fichier JSON, j’ai pu lancer une commande packer, me retournant une image VirtualBox.
+          </p>
+          <p>
+            Sur VirtualBox il n’est pas possible de déployer directement une machine virtuelle à l’aide de Packer, car il ne créé qu’une image 
+            pour VirtualBox, j’ai donc dû utiliser Vagrant qui permet le déploiement de machines grâce à une image.
+          </p>
+          <p>
+            Voici un exemple de ce que font des serveurs de réplication Master-Slave MySQL :
+          </p>
+          <img class="img-fluid" src="assets/img/stage-master-slave-shema.png" alt="">
+          <p>
+            Après cela j’ai dû faire pareil pour pouvoir créer et déployer un Windows Server 2016 sur VirtualBox. 
+            J’ai donc procédé de la même manière, en créant un nouveau fichier JSON et d’autre fichiers de 
+            configuration spécifique à Windows. Puis à l’aide de Vagrant j’ai déployé la machine virtuelle sur 
+            VirtualBox.            
+          </p>
+          <p>
+            Une fois que tout fonctionné j’ai dû refaire pareil mais pour VSphere. Il faut donc tout reprendre car 
+            la configuration des fichiers Packer ne sont pas les mêmes. Et cette fois-ci l’utilisation de Vagrant n’est 
+            pas obligatoire car le déploiement peu se faire directement avec Packer pour VSphere. Pour le 
+            Windows Server 2016, je n’ai pas rencontré de problèmes pour le déployé sur VSphere. A l’inverse, il 
+            m’a été impossible de déployer le Master-Slave sur VSphere, même avec l’aide de collègues.            
+          </p>
+          <p>
+            Exemple d’utilisation courante de Packer et Vagrant :
+          </p>
+          <img class="img-fluid" src="assets/img/packer_vagrant.png" alt="">
+        </div>
+        <div class="portfolio-description">
+          <h3 class="pb-4">Livrables des missions</h3>
+          <p>
+            Pour les différentes taches que j’ai effectuées, j’ai dû rendre certaines docs pour que les autres 
+            membres du service infra puissent comprendre ce que j’ai pu faire.            
+          </p>
+          <p>
+            Voici les différentes docs effectuées :
+          </p>
+          <ul>
+            <li>Doc Ajouter un utilisateur AD</li>
+            <li>Doc Création Master-Slave</li>
+            <li>Doc Modification de l’installeur de l’application</li>
+            <li>Doc Pentesting & Kali Linux</li>
+            <li>Doc Installation PowerShell Universal</li>
+            <li>Doc Utilisation PowerShell Universal</li>
+          </ul>
+        </div>
+        <div class="portfolio-description">
+          <h3 class="pb-4">Bilan</h3>
+          <p>
+            Après un stage de 8 semaines bien riches voici ce que je peu en conclure.          
+          </p>
+          <h4>Les plus et moins</h4>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <ul>
+            <li></li>
+            <li></li>
+          </ul>
+          <h4>Mes compétences gagnées</h4>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
+          <ul>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+          </ul>
         </div>
       </div>
     </section><!-- End Portfolio Details Section -->
