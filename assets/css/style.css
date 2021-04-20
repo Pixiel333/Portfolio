@@ -1550,24 +1550,22 @@ a:hover {
 .card-blog img {
   border-radius: 10px 10px 0px 0px;
 }
-.card-blog {
-  transition: all 0.33s ease-in-out;
+
+.card-after-animation {
+  transition: all 0.33s ease-in-out!important;
   border-radius: 10px;
 }
-
-.card-blog:hover {
+.card-after-animation:hover {
   border: 1px solid #00ef1c;
-  transform: translateY(-20px);
-  transition: all 0.33s ease-in-out;
+  transform: translateY(-20px)!important;
+  transition: all 0.33s ease-in-out!important;
 }
-
+.card-center {
+  z-index: 2;
+}
 .img-gedimat {
   background-color: #f3f3f3;
-  height: 232px;
-}
-
-.img-gedimat img {
-  margin-top: 50px;
+  border-radius: 10px 10px 0 0;
 }
 /*--------------------------------------------------------------
 # Veille

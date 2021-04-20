@@ -35,9 +35,18 @@
     }).listen();
 
     //Scroll reveal
-    ScrollReveal({ distance: '800px',  mobile: false });
-    ScrollReveal().reveal('.animate-right',{ duration: 900, origin: 'right', mobile: false});
-    ScrollReveal().reveal('.animate-left',{ duration: 900, origin: 'left', mobile: false});
+    ScrollReveal().reveal('.animate-right',{ distance: '800px', duration: 900, origin: 'right', mobile: false});
+    ScrollReveal().reveal('.animate-left',{ distance: '800px', duration: 900, origin: 'left', mobile: false});
+    ScrollReveal().reveal('.animate-center-left',{ distance: '378px', duration: 1000, origin: 'left', mobile: false, delay: 800});
+    ScrollReveal().reveal('.animate-center-right',{ distance: '378px', duration: 1000, origin: 'right', mobile: false, delay: 800});
+    ScrollReveal().reveal('.animate-center-top',{ distance: '100px', duration: 800, origin: 'top', mobile: false});
+    function myCallback (el) {
+      el.classList.remove('animate-center-top');
+      el.classList.add('card-after-animation');
+    }
+    ScrollReveal().reveal('.animate-center-top', { afterReveal: myCallback });
+    ScrollReveal().reveal('.animate-center-right', { afterReveal: myCallback });
+    ScrollReveal().reveal('.animate-center-left', { afterReveal: myCallback });
 
     //age
     var annee = document.getElementById('age');
