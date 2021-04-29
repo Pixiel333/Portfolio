@@ -35,30 +35,36 @@
     }).listen();
 
     //Scroll reveal
-    ScrollReveal().reveal('.animate-right',{ distance: '800px', duration: 900, origin: 'right', mobile: false});
-    ScrollReveal().reveal('.animate-left',{ distance: '800px', duration: 900, origin: 'left', mobile: false});
-    ScrollReveal().reveal('.animate-center-left',{ distance: '378px', duration: 1000, origin: 'left', mobile: false, delay: 800});
-    ScrollReveal().reveal('.animate-center-right',{ distance: '378px', duration: 1000, origin: 'right', mobile: false, delay: 800});
-    ScrollReveal().reveal('.animate-center-top',{ distance: '100px', duration: 800, origin: 'top', mobile: false});
+    ScrollReveal().reveal('.animate-right',{ distance: '800px', duration: 900, origin: 'right', reset: true, mobile: false});
+    ScrollReveal().reveal('.animate-left',{ distance: '800px', duration: 900, origin: 'left', reset: true, mobile: false});
+    ScrollReveal().reveal('.animate-center-left',{ distance: '378px', duration: 1000, origin: 'left', reset: true, mobile: false, delay: 800});
+    ScrollReveal().reveal('.animate-center-right',{ distance: '378px', duration: 1000, origin: 'right', reset: true, mobile: false, delay: 800});
+    ScrollReveal().reveal('.animate-center-top',{ distance: '100px', duration: 800, origin: 'top', reset: true, mobile: false});
     function myCallback (el) {
-      el.classList.remove('animate-center-top');
       el.classList.add('card-after-animation');
     }
     ScrollReveal().reveal('.animate-center-top', { afterReveal: myCallback });
     ScrollReveal().reveal('.animate-center-right', { afterReveal: myCallback });
     ScrollReveal().reveal('.animate-center-left', { afterReveal: myCallback });
 
+    function afterReset (el) {
+      el.classList.remove('card-after-animation');
+  }
+  ScrollReveal().reveal('.animate-center-top', { afterReset: afterReset });
+  ScrollReveal().reveal('.animate-center-right', { afterReset: afterReset });
+  ScrollReveal().reveal('.animate-center-left', { afterReset: afterReset });
     //age
     var annee = document.getElementById('age');
     if (annee !== null) {
       annee.textContent = getAge(new Date("2001/03/17")).toString();
     }
     
-
     //annees veille
     var annee2 = document.getElementById('anneesVeille');
-    annee2.textContent = getAge(new Date("2017/01/01")).toString();
-  });
+    if (annee2 !== null) {
+      annee2.textContent = getAge(new Date("2017/01/01")).toString();
+    }
+    });
 
   $('.navbar-toggler').on('click', function() {
     if (!$('#mainNav').hasClass('navbar-reduce')) {
