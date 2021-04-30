@@ -1071,7 +1071,7 @@ a:hover {
 }
 
 .fond-stage {
-  background-color: #0f0f0fc9;
+  background-color: #1f1f1fed;
 }
 .stage-intro {
   background-color: rgba(0, 0, 0, 0.898);
@@ -1300,6 +1300,10 @@ a:hover {
   margin-left: -3%;
 }
 
+.list-icon .about-icon ion-icon{
+  color: #39b87d;
+}
+
 .img-devops {
   position: relative;
   align-items: center;
@@ -1327,6 +1331,28 @@ a:hover {
   transform: translate(170%);
 }
 
+.outil-utilise-logo {
+  margin: 0 auto;
+}
+
+.outil-utilise-logo ion-icon {
+  position: absolute;
+}
+
+.outil-utilise-logo ion-icon:first-child {
+  font-size: 120px;
+  transform: translate(-100px);
+}
+
+.outil-utilise-logo ion-icon:first-child + ion-icon {
+  transform: translate(30px,20px);
+  font-size: 80px;
+}
+
+.outil-utilise-logo ion-icon:last-child {
+  transform: translate(130px,-60px);
+  font-size: 240px;
+}
 /*--------------------------------------------------------------
 # Veille - Home
 --------------------------------------------------------------*/
@@ -1605,6 +1631,10 @@ a:hover {
 
 .veille-content-utilisation img {
   max-width: 100%;
+}
+
+.veille-content-utilisation p a {
+color: #39b87d;
 }
 
 .veille-content-utilisation a:hover {
