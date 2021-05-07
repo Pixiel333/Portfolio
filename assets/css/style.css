@@ -11,6 +11,7 @@
 body {
   background-color: #5a5a5a;
   color: #fdfdfd;
+  overflow-x: hidden;
 }
 
 h1,
@@ -1110,20 +1111,39 @@ a:hover {
   padding-top: 30px;
   font-size: 1.25rem;
   font-weight: 300;
-  
 }
 
-.portfolio-details h2 {
-  padding-top: 15px;
+.portfolio-details hr {
+  margin-bottom: 56px;
+    width: 30%;
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(28, 219, 129, 0.75), rgba(255, 255, 255, 0));
 }
 
 .portfolio-details h3 {
   font-size: 22px;
+  padding-bottom: 40px;
+}
+
+.portfolio-details .mission-titre {
+  justify-content: center;
 }
 
 .portfolio-details h4 {
   font-size: 20px;
   margin-bottom: 0;
+}
+
+.portfolio-details h3 + ion-icon{
+  font-size: 70px;
+  transform: translate(20px, -18px);
+
+}
+@media (max-width: 529px) {
+  .portfolio-details h3 + ion-icon{
+    transform: translate(0, -35px);
+  }
 }
 
 .portfolio-description .portfolio-details-container h3 {
@@ -1132,6 +1152,7 @@ a:hover {
 
 .portfolio-details .portfolio-details-container {
   position: relative;
+  padding-bottom: 40px;
 }
 
 .portfolio-details .portfolio-details-carousel {
@@ -1186,7 +1207,8 @@ a:hover {
 }
 
 .portfolio-details .portfolio-description {
-  padding-top: 20px;
+  padding-bottom: 40px;
+
 }
 
 .portfolio-details .portfolio-description h2 {
@@ -1320,39 +1342,75 @@ a:hover {
   transform: translate(350%);
 }
 
-.stage-securite-img {
-  position: relative;
-  align-items: center;
-  padding-left: 15px;
-}
-
-.stage-securite-img img {
-  position: absolute;
-  transform: translate(170%);
-}
-
 .outil-utilise-logo {
   margin: 0 auto;
+  
 }
 
 .outil-utilise-logo ion-icon {
-  position: absolute;
-}
-
-.outil-utilise-logo ion-icon:first-child {
   font-size: 120px;
-  transform: translate(-100px);
 }
 
-.outil-utilise-logo ion-icon:first-child + ion-icon {
-  transform: translate(30px,20px);
+.outil-utilise-logo .plus-logo {
+  transform: translate(0,20px);
+  margin: 0 30px;
   font-size: 80px;
 }
 
-.outil-utilise-logo ion-icon:last-child {
-  transform: translate(130px,-60px);
+.outil-utilise-logo .nessus-logo {
+  transform: translate(0,5px);
   font-size: 240px;
+  max-height: 100px;
 }
+
+@media (max-width: 576px) {
+  .outil-utilise-logo {
+    justify-content: center;
+  }
+
+  .outil-utilise-logo ion-icon{
+    font-size: 100px;
+  }
+  
+  .outil-utilise-logo .plus-logo {
+    font-size: 60px;
+    margin: 0 10px;
+    transform: translate(0,20px);
+  }
+  
+  .outil-utilise-logo .nessus-logo {
+    font-size: 200px;
+  }
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Roboto&display=swap');
+@import url(//db.onlinewebfonts.com/c/0a6ee448d1bd65c56f6cf256a7c6f20a?family=Bahnschrift);
+
+.stage-bilan {
+  padding-bottom: 30px;
+  font-size: 1.20rem;
+}
+
+.stage-bilan .services-mf{
+  margin: 40px 0;
+}
+
+
+.stage-bilan h4 {
+  font-size: 20px;
+  margin-bottom: 10px;
+  font-family: 'Bahnschrift', 'Roboto', sans-serif;
+  font-weight: 300;
+  transform: translate(5px, -8px);
+  
+}
+.stage-bilan .title-s {
+  font-size: 1.5rem;
+  transform: translate(0, -3px);
+  padding-bottom: unset;
+  margin-bottom: 1rem;
+}
+
 /*--------------------------------------------------------------
 # Veille - Home
 --------------------------------------------------------------*/
