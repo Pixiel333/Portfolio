@@ -1719,7 +1719,7 @@ color: #39b87d;
     margin-left: auto!important;
   }
 
-  .veille-content-utilisation img:not(.badge img), .veille-content-utilisation iframe:not(.flex-row-reverse iframe) {
+  .veille-content-utilisation img:not(.badge img, .animate-left), .veille-content-utilisation iframe:not(.flex-row-reverse iframe) {
     margin-left: 10%;
   }
   
