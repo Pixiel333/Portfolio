@@ -575,10 +575,16 @@ a:hover {
 }
 
 .navbar-b .navbar-brand {
-  color: #fff;
+  max-height: 50px;
   font-size: 1.6rem;
   font-weight: 600;
 }
+
+.navbar-b .navbar-brand ion-icon{
+  font-size: 70px;
+  transform: translate(0,-10px);
+}
+
 
 .navbar-b .navbar-nav .dropdown-item.show .dropdown-menu,
 .navbar-b .dropdown.show .dropdown-menu,
