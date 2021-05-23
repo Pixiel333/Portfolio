@@ -671,6 +671,11 @@ a:hover {
   color: #fff;
 }
 
+.intro-title-long {
+  font-size: 2.17rem;
+  text-transform: uppercase;
+}
+
 .intro-title-page {
   font-size: 2.22rem;
   text-transform: uppercase;
@@ -722,7 +727,7 @@ a:hover {
     font-size: 2.5rem;
   }
 
-  .intro-title-page {
+  .intro-title-page, .intro-title-long {
     font-size: 3rem;
   }
 }
@@ -1664,6 +1669,26 @@ a:hover {
 #projet {
   font-size: 1.25rem;
   font-weight: 300;
+}
+
+#projet .service-box .s-description {
+font-size: 20px;
+}
+
+#projet .service-box .s-description ion-icon {
+  transform: translate(0, 4px);
+}
+
+#projet .service-box .s-title {
+  font-size: 1.8rem;
+}
+
+#projet hr {
+  margin-bottom: 56px;
+  width: 30%;
+  border: 0;
+  height: 1px;
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(28, 219, 129, 0.75), rgba(255, 255, 255, 0));
 }
 
 /*--------------------------------------------------------------
