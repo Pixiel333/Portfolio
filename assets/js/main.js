@@ -37,6 +37,8 @@
     //Scroll reveal
     ScrollReveal().reveal('.animate-right',{ distance: '800px', duration: 900, origin: 'right', reset: true, mobile: false});
     ScrollReveal().reveal('.animate-left',{ distance: '800px', duration: 900, origin: 'left', reset: true, mobile: false});
+    ScrollReveal().reveal('.animate-top',{ distance: '300px', duration: 900, origin: 'top', reset: true, mobile: false});
+    ScrollReveal().reveal('.animate-bottom',{ distance: '200px', duration: 1200, origin: 'bottom', reset: true, mobile: false});
     ScrollReveal().reveal('.animate-center-left',{ distance: '378px', duration: 1000, origin: 'left', reset: true, mobile: false, delay: 800});
     ScrollReveal().reveal('.animate-center-right',{ distance: '378px', duration: 1000, origin: 'right', reset: true, mobile: false, delay: 800});
     ScrollReveal().reveal('.animate-center-top',{ distance: '100px', duration: 800, origin: 'top', reset: true, mobile: false});
@@ -49,22 +51,28 @@
 
     function afterReset (el) {
       el.classList.remove('card-after-animation');
-  }
-  ScrollReveal().reveal('.animate-center-top', { afterReset: afterReset });
-  ScrollReveal().reveal('.animate-center-right', { afterReset: afterReset });
-  ScrollReveal().reveal('.animate-center-left', { afterReset: afterReset });
+    }
+    ScrollReveal().reveal('.animate-center-top', { afterReset: afterReset });
+    ScrollReveal().reveal('.animate-center-right', { afterReset: afterReset });
+    ScrollReveal().reveal('.animate-center-left', { afterReset: afterReset });
     //age
     var annee = document.getElementById('age');
     if (annee !== null) {
       annee.textContent = getAge(new Date("2001/03/17")).toString();
     }
     
-    //annees veille
+    //annees veille home
     var annee2 = document.getElementById('anneesVeille');
     if (annee2 !== null) {
       annee2.textContent = getAge(new Date("2017/01/01")).toString();
     }
-    });
+
+    //annees veille page de veille
+    var annee3 = document.getElementById('anneesVeille2');
+    if (annee3 !== null) {
+      annee3.textContent = getAge(new Date("2017/01/01")).toString();
+    }
+  });
 
   $('.navbar-toggler').on('click', function() {
     if (!$('#mainNav').hasClass('navbar-reduce')) {
