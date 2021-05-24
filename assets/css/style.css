@@ -1691,6 +1691,17 @@ font-size: 20px;
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0), rgba(28, 219, 129, 0.75), rgba(255, 255, 255, 0));
 }
 
+#projet .resume-item .title-s {
+  font-size: 1.5rem;
+  transform: translate(0, -4px);
+}
+
+@media (max-width: 991px) {
+  #projet .resume-first-projet {
+    padding-bottom: 20px;
+  }
+}
+
 /*--------------------------------------------------------------
 # Veille
 --------------------------------------------------------------*/
