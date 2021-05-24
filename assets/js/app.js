@@ -13,7 +13,7 @@ particlesJS.load('particles-js', 'particles.json', function() {
 
 particlesJS("particles-js", {
   particles: {
-    number: { value: 70, density: { enable: true, value_area: 400 } },
+    number: { value: 70, density: { enable: true, value_area: 500 } },
     color: { value: "#05ff3f" },
     shape: {
       type: "circle",
@@ -40,7 +40,7 @@ particlesJS("particles-js", {
     },
     move: {
       enable: true,
-      speed: 3,
+      speed: 2,
       direction: "left",
       random: false,
       straight: false,
