@@ -175,7 +175,7 @@ a:hover {
 }
 
 .subtitle-a {
-  color: #4e4e4e;
+  color: #92c5a9;
 }
 
 .line-mf {
@@ -1002,6 +1002,8 @@ a:hover {
 
 .counter-ico {
   margin-bottom: 1rem;
+  font-size: 100px;
+  color: white;
 }
 
 .counter-ico .ico-circle {
@@ -1014,60 +1016,6 @@ a:hover {
 .counter-num .counter {
   font-size: 2rem;
   margin-bottom: 0;
-}
-
-/*--------------------------------------------------------------
-# Portfolio
---------------------------------------------------------------*/
-.work-box {
-  margin-bottom: 3rem;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  background-color: #fff;
-}
-
-.work-box:hover img {
-  transform: scale(1.3);
-}
-
-.work-img {
-  display: block;
-  overflow: hidden;
-}
-
-.work-img img {
-  transition: all 1s;
-}
-
-.work-content {
-  padding: 2rem 3% 1rem 4%;
-}
-
-.work-content .w-more {
-  color: #4e4e4e;
-  font-size: .8rem;
-}
-
-.work-content .w-more .w-ctegory {
-  color: #0078ff;
-}
-
-.work-content .w-like {
-  font-size: 2.5rem;
-  color: #0078ff;
-  float: right;
-}
-
-.work-content .w-like a {
-  color: #0078ff;
-}
-
-.work-content .w-like .num-like {
-  font-size: .7rem;
-}
-
-.w-title {
-  font-size: 1.2rem;
 }
 
 /*--------------------------------------------------------------
@@ -1461,12 +1409,57 @@ a:hover {
 /*--------------------------------------------------------------
 # Contact
 --------------------------------------------------------------*/
-.footer-paralax {
-  padding: 4rem 0 0 0;
+#contact {
+  background-color: #151515fa;
 }
 
-.contact-mf {
-  margin-top: 4rem;
+#contact h3 {
+  font-size: 18px;
+  font-weight: 100;
+  padding-top: 6px;
+}
+#contact ion-icon {
+  font-size: 65px;
+}
+
+.contact-logos {
+  padding: 4rem 0 14rem;
+}
+
+.contact-logos .col {
+  padding-bottom: 8rem;
+}
+
+.icon-rotate ion-icon {
+  -webkit-transform: translateZ(0);
+  transform: translateZ(0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.icon-rotate:hover ion-icon, .icon-rotate:focus ion-icon, .icon-rotate:active ion-icon {
+  -webkit-transform: scale(1.15) rotate(6deg);
+  transform: scale(1.15) rotate(6deg);
+}
+
+.icon-grow ion-icon {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.icon-grow:hover ion-icon, .icon-grow:focus ion-icon, .icon-grow:active ion-icon {
+  -webkit-transform: scale(1.1);
+  transform: scale(1.1);
 }
 
 @media (min-width: 767px) {
@@ -1703,6 +1696,18 @@ font-size: 20px;
 }
 
 /*--------------------------------------------------------------
+# Projet de stage
+--------------------------------------------------------------*/
+.link-style {
+  color: #39b87d;
+}
+
+.link-style:hover {
+  text-decoration: #39b87d underline;
+  color: #39b87d;
+}
+
+/*--------------------------------------------------------------
 # Veille
 --------------------------------------------------------------*/
 #veille {
@@ -1870,9 +1875,21 @@ color: #39b87d;
 --------------------------------------------------------------*/
 footer {
   text-align: center;
-  color: #fff;
-  padding: 25px 0;
+  color: #fdfdfd;
+  padding: 4rem 0 30px;
   background: #0e0e0ee6;
+}
+
+footer ion-icon {
+  font-size: 2.2rem;
+}
+
+footer .list-inline-item:not(:last-child) {
+  margin-right: 1rem;
+}
+
+footer .list-inline-item .github:hover {
+  color: #f0f6fcb3;
 }
 
 footer .copyright {
@@ -1884,7 +1901,7 @@ footer .credits {
 }
 
 footer .credits a {
-  color: #fff;
+  color: #fdfdfd;
 }
 
 
