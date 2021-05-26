@@ -1422,6 +1422,10 @@ a:hover {
   font-size: 65px;
 }
 
+#contact a:hover ion-icon {
+  color: #39b87d;
+}
+
 .contact-logos {
   padding: 4rem 0 14rem;
 }
@@ -1469,103 +1473,8 @@ a:hover {
   }
 }
 
-.php-email-form .validate {
-  display: none;
-  color: red;
-  margin: 0 0 15px 0;
-  font-weight: 400;
-  font-size: 13px;
-}
-
-.php-email-form .error-message {
-  display: none;
-  color: #fff;
-  background: #ed3c0d;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.php-email-form .sent-message {
-  display: none;
-  color: #fff;
-  background: #18d26e;
-  text-align: center;
-  padding: 15px;
-  font-weight: 600;
-}
-
-.php-email-form .loading {
-  display: none;
-  background: #fff;
-  text-align: center;
-  padding: 15px;
-}
-
-.php-email-form .loading:before {
-  content: "";
-  display: inline-block;
-  border-radius: 50%;
-  width: 24px;
-  height: 24px;
-  margin: 0 10px -6px 0;
-  border: 3px solid #18d26e;
-  border-top-color: #eee;
-  -webkit-animation: animate-loading 1s linear infinite;
-  animation: animate-loading 1s linear infinite;
-}
-
-.php-email-form input, .php-email-form textarea {
-  border-radius: 0;
-  box-shadow: none;
-  font-size: 14px;
-}
-
-.php-email-form input::focus, .php-email-form textarea::focus {
-  background-color: #0078ff;
-}
-
-.php-email-form input {
-  padding: 20px 15px;
-}
-
-.php-email-form textarea {
-  padding: 12px 15px;
-  margin-bottom: 0;
-}
-
-.php-email-form button[type="submit"] {
-  background: #0078ff;
-  border: 0;
-  padding: 10px 24px;
-  color: #fff;
-  transition: 0.4s;
-}
-
-.php-email-form button[type="submit"]:hover {
-  background: #3393ff;
-}
-
-@-webkit-keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
-@keyframes animate-loading {
-  0% {
-    transform: rotate(0deg);
-  }
-  100% {
-    transform: rotate(360deg);
-  }
-}
-
 /*--------------------------------------------------------------
-# Stages (Blog)
+# Stages - Experiences
 --------------------------------------------------------------*/
 @media (min-width: 767px) {
   .card-blog {
@@ -1884,12 +1793,44 @@ footer ion-icon {
   font-size: 2.2rem;
 }
 
+.icon-shrink ion-icon {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+.icon-shrink:hover ion-icon, .icon-shrink:focus ion-icon, .shrinkhvricon-shrink:active ion-icon {
+  -webkit-transform: scale(0.95);
+  transform: scale(0.95);
+}
+
 footer .list-inline-item:not(:last-child) {
   margin-right: 1rem;
 }
 
+footer .list-inline-item a {
+  transition: none;
+}
+
+footer .list-inline-item a:hover {
+  transition: none;
+}
+
 footer .list-inline-item .github:hover {
   color: #f0f6fcb3;
+}
+
+footer .list-inline-item .linkedin:hover {
+  color: #0a66c2;
+}
+
+footer .list-inline-item .hackTheBox:hover {
+  color: #9FEF00;
 }
 
 footer .copyright {
