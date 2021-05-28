@@ -939,8 +939,12 @@ a:hover {
   }
 }
 /*--------------------------------------------------------------
-# Services
+# Services - Parcours
 --------------------------------------------------------------*/
+#parcours .overlay-mf {
+  background-color: #161b19;
+}
+
 .resume-first {
   padding-bottom: 20px;
 }
@@ -1064,6 +1068,18 @@ a:hover {
   background-color: #39b87d;
   margin: 0 auto;
   z-index: -1;
+}
+
+@media (min-width: 767px) {
+  .img-stage-left img, .img-stage-left + p, .img-stage-left p {
+    padding-right: 55px!important;
+    padding-left: 0;
+  }
+  
+  .img-stage-right img, .img-stage-right + p, .img-stage-right p {
+    padding-right: 0;
+    padding-left: 55px!important;
+  }
 }
 
 .portfolio-details {
@@ -1259,6 +1275,10 @@ a:hover {
   width: 100%;
   height: auto;
   border-radius: 20px;
+}
+
+.img-bureau-stage + p {
+  max-width: 450px;
 }
 
 .img-citeInternational img {
