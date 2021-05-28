@@ -17,13 +17,13 @@
   <link href="assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <link href="assets/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet">
   <link href="assets/vendor/ionicons/css/ionicons.min.css" rel="stylesheet">
-  <link href="assets/vendor/owl.carousel/assets/owl.carousel.min.css" rel="stylesheet">
   <link href="assets/vendor/venobox/venobox.css" rel="stylesheet">
 
   <!-- Template Main CSS File -->
   <link href="assets/css/style.css" rel="stylesheet">
-
+ 
   <script src="https://unpkg.com/scrollreveal"></script>
+  
 </head>
 
 <body id="page-top">
@@ -63,7 +63,7 @@
   </nav>
   
   <div class="intro intro-single route bg-image stage-intro">
-    
+    <div id="particles-js" style="background-image: url(assets/img/landing-pattern.png);"></div>
     <div class="overlay-mf"></div>
     <div class="intro-content display-table">
       <div class="table-cell">
@@ -81,6 +81,7 @@
   </div>
 
   <main id="stage">
+    <!--
     <div id="three-js-net">
       <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r123/three.min.js"></script>
       <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.1.9/p5.min.js"></script>
@@ -99,7 +100,7 @@
           backgroundColor: 0x0
         })
         </script>
-    </div>
+    </div>-->
     <!-- ======= Portfolio Details Section ======= -->
     <section class="portfolio-details fond-stage">
       <div class="container">
@@ -126,8 +127,7 @@
           <h2>Contexte</h2>
           <div class="line-mf"></div>
         </div>
-        <div class="portfolio-description">
-          <h3>L'entreprise</h3>
+        <div class="portfolio-description pt-5">
           <p>
             J’ai pris plaisir à effectuer ce stage dans l’entreprise <strong>Com & Company</strong>, associée au groupe
             <strong>Valeur et Capital</strong>, groupe dont le cœur de métier réside dans la vente d’immobilier neuf et de
@@ -162,7 +162,9 @@
         </div>
         <hr>
         <div class="portfolio-description">
-          <h3>Parc Informatique</h3>
+          <div class="mission-titre">
+            <h3>Parc Informatique</h3>
+          </div>
           <div class="img-parc-informatique">
             <img src="assets/img/parc-informatique.png" alt="Schéma du parc informatique de Valeur et Capital">
           </div>
@@ -172,7 +174,9 @@
         </div>
         <hr>
         <div class="portfolio-description">
-          <h3>Service</h3>
+          <div class="mission-titre">
+            <h3>Service</h3>
+          </div>
           <p>
             Durant ces 2 mois de stage, j'ai intégré le service qui s’occupe de l’<strong>infrastructure</strong> de
             l’entreprise et de son support informatique. Il était composé d’un responsable et de 5
@@ -186,7 +190,9 @@
         </div>
         <hr>
         <div class="portfolio-description">
-          <h3>Mon espace de travail</h3>
+          <div class="mission-titre">
+            <h3>Mon espace de travail</h3>
+          </div>
           <div class="row align-items-center">
             <div class="col-md-6">
               <p>
@@ -271,10 +277,10 @@
       </div>
         <hr>
         <div class="portfolio-description">
-          <div class="row mission-titre">
-            <h3>Mission – Sécurité</h3><ion-icon  src="assets/vendor/ionicons/fonts/security-logo.svg"></ion-icon>
+          <div class="mission-titre">
+            <ion-icon  src="assets/vendor/ionicons/fonts/security-logo.svg">
+            </ion-icon><h3>Mission – Sécurité</h3>
           </div>
-
           <h4>Problématique :</h4>
           <p>
             La <strong>cybersécurité</strong> est un enjeu crucial pour toutes les activités des entreprises aujourd’hui.
@@ -329,12 +335,13 @@
             Une fois cette tâche finie, j’ai présenté le rapport à mon maître de stage, montrant qu’il n’y
             avait aucune faille critique dans le contrôleur de domaine actuel de l’entreprise.
           </p>
-          <img class="img-fluid" src="assets/img/nessus-rapport.png" alt="">
+          <img class="img-fluid animate-right" src="assets/img/nessus-rapport.png" alt="">
         </div>
         <hr>
         <div class="portfolio-description">
-          <div class="row mission-titre">
-            <h3>Mission – Administration Active Directory</h3><ion-icon name="logo-windows"></ion-icon>
+          <div class="mission-titre">
+            <ion-icon name="logo-windows"></ion-icon>
+            <h3>Mission – Administration Active Directory</h3>
           </div>
           <h4>Problématique</h4>
           <p>
@@ -380,7 +387,7 @@
             <li>Créer un nouveau groupe dans l’AD</li>
             <li>Déplacer les utilisateurs désactivés dans une OU Historique</li>
           </ul>
-          <div class="row  pt-5 pb-5">
+          <div class="row pt-5 pb-5">
             <div class="col-md-6 img-stage-left">
               <p>
                 A chaque fois que je terminais un script je devais le tester sur un <strong>AD de test</strong> qui était la copie conforme 
@@ -403,8 +410,8 @@
             </div>
           </div>
           <div class="row pt-5 pb-5">
-            <div class="col-md-6 animate-left">
-              <div class="img-stage-left">
+            <div class="col-md-6">
+              <div class="img-stage-left animate-left">
                 <img class="img-fluid" src="assets/img/stage-config-PU.png" alt="">
               </div>
               <p>
@@ -440,7 +447,10 @@
         </div>
         <hr>
         <div class="portfolio-description">
-          <h3 class="pb-4">Mission – Automatisation de machines virtuels</h3>
+          <div class="mission-titre">
+            <ion-icon name="terminal-outline"></ion-icon>
+            <h3 class="pb-4">Mission – Automatisation de machines virtuels</h3>
+          </div>
           <h4>Problématique</h4>
           <p>
             Lorsque l’on crée une machine virtuelle, il est utile de pouvoir <strong>automatiser</strong> sa création pour
@@ -489,7 +499,7 @@
           <p>
             Voici un exemple de ce que font des serveurs de réplication Master-Slave MySQL :
           </p>
-          <img class="img-fluid" src="assets/img/stage-master-slave-shema.png" alt="">
+          <img class="img-fluid animate-right" src="assets/img/stage-master-slave-shema.png" alt="">
           <p>
             Après cela, j’ai dû reproduire la même chose pour créer et déployer un <strong>Windows Server 2016</strong>
             sur VirtualBox. J’ai donc procédé de la même manière, en créant un nouveau fichier JSON et
@@ -511,7 +521,11 @@
         </div>
         <hr>
         <div class="portfolio-description">
-          <h3 class="pb-4">Livrables des missions</h3>
+          <div class="mission-titre">
+            <ion-icon name="documents-outline"></ion-icon>
+            <h3 class="pb-4">Livrables des missions</h3>
+          </div>
+          
           <p>
             Pour chaque tâches effectuées, j’ai dû rendre certaines <strong>documentations</strong> pour que les autres
             membres du service infrastructure puissent comprendre au mieux ce que j’ai fait.                       
@@ -520,12 +534,12 @@
             Voici les différentes docs effectuées :
           </p>
           <ul>
-            <li><a class="link-style" href="assets/ressources/Doc_Ajouter_un_utilisateur_AD.pdf" target="_blank">Doc Ajouter un utilisateur AD</a></li>
-            <li><a class="link-style" href="assets/ressources/Doc_Création_Master-Slave.pdf" target="_blank">Doc Création Master-Slave</a></li>
-            <li><a class="link-style" href="assets/ressources/Doc_Modification_installeur_application.pdf" target="_blank">Doc Modification de l’installeur de l’application</a></li>
-            <li><a class="link-style" href="assets/ressources/Doc_Pentesting_&_Kali Linux.pdf" target="_blank">Doc Pentesting & Kali Linux</a></li>
-            <li><a class="link-style" href="assets/ressources/Doc_Installation_PowerShell_Universal.pdf" target="_blank">Doc Installation PowerShell Universal</a></li>
-            <li><a class="link-style" href="assets/ressources/Doc_Utilisation_PowerShell_Universal.pdf" target="_blank">Doc Utilisation PowerShell Universal</a></li>
+            <li class="text-grow"><a class="link-style" href="assets/ressources/Doc_Ajouter_un_utilisateur_AD.pdf" target="_blank">Doc Ajouter un utilisateur AD</a></li>
+            <li class="text-grow"><a class="link-style" href="assets/ressources/Doc_Création_Master-Slave.pdf" target="_blank">Doc Création Master-Slave</a></li>
+            <li class="text-grow"><a class="link-style" href="assets/ressources/Doc_Modification_installeur_application.pdf" target="_blank">Doc Modification de l’installeur de l’application</a></li>
+            <li class="text-grow"><a class="link-style" href="assets/ressources/Doc_Pentesting_&_Kali Linux.pdf" target="_blank">Doc Pentesting & Kali Linux</a></li>
+            <li class="text-grow"><a class="link-style" href="assets/ressources/Doc_Installation_PowerShell_Universal.pdf" target="_blank">Doc Installation PowerShell Universal</a></li>
+            <li class="text-grow"><a class="link-style" href="assets/ressources/Doc_Utilisation_PowerShell_Universal.pdf" target="_blank">Doc Utilisation PowerShell Universal</a></li>
           </ul>
         </div>
         <hr>
@@ -537,7 +551,7 @@
           <p class="text-center">
             Après un stage de <strong>8 semaines</strong> bien riches, voici ce que je peux en conclure.          
           </p>
-          <div class="services-mf">
+          <div class="services-mf animate-bottom-noReset">
             <div class="row">
               <div class="col-lg-6">
                 <h3 class="title-s title-s-color">Les plus et moins</h3>
@@ -603,7 +617,7 @@
     <div class="container">
       <div class="row pb-4">
         <div class="col-sm-12">
-          <ul class="list-inline">
+          <ul class="list-inline animate-bottom-noReset">
             <li class="list-inline-item">
               <a class="github icon-shrink" href="https://github.com/Pixiel333" target="_blank">
                 <ion-icon name="logo-github"></ion-icon>
@@ -642,10 +656,8 @@
   <script src="assets/vendor/jquery/jquery.min.js"></script>
   <script src="assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="assets/vendor/jquery.easing/jquery.easing.min.js"></script>
-  <script src="assets/vendor/php-email-form/validate.js"></script>
   <script src="assets/vendor/waypoints/jquery.waypoints.min.js"></script>
   <script src="assets/vendor/counterup/jquery.counterup.min.js"></script>
-  <script src="assets/vendor/owl.carousel/owl.carousel.min.js"></script>
   <script src="assets/vendor/typed.js/typed.min.js"></script>
   <script src="assets/vendor/venobox/venobox.min.js"></script>
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/egg.js/1.0/egg.min.js"></script>
@@ -653,8 +665,12 @@
   <!-- Ionicons -->
   <script src="https://unpkg.com/ionicons@5.4.0/dist/ionicons.js"></script>
 
-  <!-- Template Main JS File -->
-  <script src="assets/js/main.js"></script>
+   <!-- Particle js-->
+   <script type="text/javascript" src="assets/js/particles.min.js"></script>
+   <script type="text/javascript" src="assets/js/app.js"></script>
+
+   <!-- Main JS File -->
+   <script src="assets/js/main.js"></script>
 
 </body>
 
