@@ -38,9 +38,10 @@
     ScrollReveal().reveal('.animate-right',{ distance: '800px', duration: 900, origin: 'right', reset: true, mobile: false});
     ScrollReveal().reveal('.animate-left',{ distance: '800px', duration: 900, origin: 'left', reset: true, mobile: false});
     ScrollReveal().reveal('.animate-top',{ distance: '300px', duration: 900, origin: 'top', reset: true, mobile: false});
-    ScrollReveal().reveal('.animate-bottom',{ distance: '200px', duration: 1200, origin: 'bottom', reset: true, mobile: false});
-    ScrollReveal().reveal('.animate-center-left',{ distance: '378px', duration: 1000, origin: 'left', reset: true, mobile: false, delay: 800});
-    ScrollReveal().reveal('.animate-center-right',{ distance: '378px', duration: 1000, origin: 'right', reset: true, mobile: false, delay: 800});
+    ScrollReveal().reveal('.animate-bottom',{ distance: '100px', duration: 1000, origin: 'bottom', reset: true, mobile: false});
+    ScrollReveal().reveal('.animate-bottom-noReset',{ distance: '50px', duration: 1000, origin: 'bottom', reset: false, mobile: true});
+    ScrollReveal().reveal('.animate-center-left',{ distance: '378px', duration: 1000, origin: 'left', reset: true, mobile: false, delay: 500});
+    ScrollReveal().reveal('.animate-center-right',{ distance: '378px', duration: 1000, origin: 'right', reset: true, mobile: false, delay: 500});
     ScrollReveal().reveal('.animate-center-top',{ distance: '100px', duration: 800, origin: 'top', reset: true, mobile: false});
     function myCallback (el) {
       el.classList.add('card-after-animation');
@@ -188,27 +189,4 @@
       backSpeed: 30
     });
   }
-
-  /*--/ Testimonials owl /--*/
-  $('#testimonial-mf').owlCarousel({
-    margin: 20,
-    autoplay: true,
-    autoplayTimeout: 4000,
-    autoplayHoverPause: true,
-    responsive: {
-      0: {
-        items: 1,
-      }
-    }
-  });
-
-  // Portfolio details carousel
-  $(".portfolio-details-carousel").owlCarousel({
-    autoplay: true,
-    dots: true,
-    loop: true,
-    items: 1
-  });
-
-  
 })(jQuery);
