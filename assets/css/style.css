@@ -942,7 +942,7 @@ a:hover {
 # Services - Parcours
 --------------------------------------------------------------*/
 #parcours .overlay-mf {
-  background-color: #161b19;
+  background-color: #121113;
 }
 
 .resume-first {
@@ -1035,8 +1035,9 @@ a:hover {
 }
 
 .fond-stage {
-  background-color: #1f1f1fed;
+  background-color: #1f1f1ff0;
 }
+
 .stage-intro {
   background-color: rgba(0, 0, 0, 0.898);
 }
@@ -1046,12 +1047,14 @@ a:hover {
   width: 500px;
   height: 500px;
 }
+
 .photo-batiment-stage {
   position: absolute;
   right: 20px;
   top: 50%;
   transform: translate(0px, -50%);
 }
+
 .photo-batiment-stage img{
   border-radius: 100%;
   width: 300px;
@@ -1097,28 +1100,26 @@ a:hover {
 }
 
 .portfolio-details h3 {
-  font-size: 22px;
+  font-size: 24px;
   padding-bottom: 40px;
 }
 
 .portfolio-details .mission-titre {
-  justify-content: center;
+  text-align: center;
+}
+
+.portfolio-details .mission-titre ion-icon {
+  font-size: 70px;
+  transform: translate(0, -18px);
 }
 
 .portfolio-details h4 {
-  font-size: 20px;
-  margin-bottom: 0;
-}
-
-.portfolio-details h3 + ion-icon{
-  font-size: 70px;
-  transform: translate(20px, -18px);
-
-}
-@media (max-width: 529px) {
-  .portfolio-details h3 + ion-icon{
-    transform: translate(0, -35px);
-  }
+  font-size: 21px;
+  background-color: #a7e4c41f;
+  padding: 5px 15px;
+  display: inline-block;
+  font-family: 'Bahnschrift', 'Roboto', sans-serif;
+  font-weight: 300;
 }
 
 .portfolio-description .portfolio-details-container h3 {
@@ -1390,6 +1391,22 @@ a:hover {
   margin-bottom: 1rem;
 }
 
+.text-grow {
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-property: transform;
+  transition-property: transform;
+}
+
+.text-grow:hover, .text-grow:focus, .text-grow:active {
+  -webkit-transform: scale(1.02);
+  transform: scale(1.02);
+}
+
 /*--------------------------------------------------------------
 # Veille - Home
 --------------------------------------------------------------*/
@@ -1405,6 +1422,12 @@ a:hover {
   border: 1px solid #1acb4a;
   border-radius: 20px;
   background-color: #00000024;
+}
+
+@media (max-width: 767px) {
+  #veille-home .veille-home-info {
+    margin: 0;
+  }
 }
 
 #veille-home .veille-home-info p {
@@ -1490,6 +1513,16 @@ a:hover {
   .contact-mf .box-pl2 {
     margin-top: 3rem;
     padding-left: 0rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .contact-logos .col, .contact-logos .col-sm-4 {
+    padding-bottom: 4rem;
+  }
+
+  .contact-logos {
+    padding: 0;
   }
 }
 
