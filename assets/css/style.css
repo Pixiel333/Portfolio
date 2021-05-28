@@ -1587,16 +1587,6 @@ a:hover {
   color: #9fbbaa;
 }
 
-.card-blog .post-author {
-  display: inline-block;
-}
-
-.card-blog .post-date {
-  color: #9fbbaa;
-  display: inline-block;
-  float: right;
-}
-
 .card-blog img {
   border-radius: 10px 10px 0px 0px;
 }
