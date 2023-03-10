@@ -29,10 +29,36 @@
     
     //kali egg
     var egg = new Egg("k,a,l,i,l,i,n,u,x", function() {
-      jQuery('#kali-linux').fadeIn(500, function() {
-        window.setTimeout(function() { jQuery('#kali-linux').hide("slow"); }, 10000);
+      // Crée une nouvelle div HTML
+      var newDiv = $("<div>").attr("id", "kali-egg");
+        
+      // Ajoute la nouvelle div à la fin du body
+      newDiv.appendTo("body");
+
+      // Applique un style à la nouvelle div pour la positionner devant les autres éléments
+      newDiv.css({
+        "position": "absolute",
+        "top": "0",
+        "left": "0",
+        "z-index": "9999"
       });
+
+      // Charge la page "test.html" dans la div avec l'ID "ma-div"
+      $("#kali-egg").load("kalilinux.html", function() {
+        // Affiche la page après qu'elle ait fini de charger
+        $(this).fadeIn(500);
+      });
+      
+      // Cache la page après 10 secondes
+      setTimeout(function() {
+        $("#kali-egg").hide();
+      }, 10000); // 10000 millisecondes = 10 secondes
+
+      setTimeout(function() {
+        newDiv.remove();
+      }, 10000);
     }).listen();
+    
 
     //Scroll reveal
     ScrollReveal().reveal('.animate-right',{ distance: '800px', duration: 900, origin: 'right', reset: true, mobile: false});
