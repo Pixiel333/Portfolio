@@ -1,11 +1,11 @@
-/**
-* Template Name: DevFolio - v2.4.1
-* Template URL: https://bootstrapmade.com/devfolio-bootstrap-portfolio-html-template/
-* Author: BootstrapMade.com
-* License: https://bootstrapmade.com/license/
-*/
+
 (function($) {
   "use strict";
+
+  let calInitialized = {
+    "rdv-physique": false,
+    "rdv-visio": false
+  };
 
   var nav = $('nav');
   var navHeight = nav.outerHeight();
@@ -88,6 +88,90 @@
       annee.textContent = getAge(new Date("2001/03/17")).toString();
     }
     
+    // Function to initialize Cal
+    function initializeCal() {
+      // Remove any existing Cal instances in the rdv-content sections
+      $('.rdv-content').empty();
+
+      // Get the active div
+      let activeRdvContentDiv = $('.rdv-content.active').first();
+      let activeRdvContentDivId = activeRdvContentDiv.attr('id');
+      let link = activeRdvContentDivId === "rdv-visio" ? "allan-chapuis/rdv-visio-ou-tel" : "allan-chapuis/rdv-physique";
+
+      // Initialize Cal with the appropriate link
+      Cal("inline", {
+        elementOrSelector: "#" + activeRdvContentDivId,
+        calLink: link,
+        layout: "month_view"
+      });
+      Cal("ui", {
+        styles: {
+          branding: {
+            brandColor: "#39b87d"
+          }
+        },
+        hideEventTypeDetails: false,
+        layout: "month_view"
+      });
+    }
+
+    // Function to initialize the floating button if not already initialized
+    function initializeFloatingButton() {
+      if (!calInitialized) {
+        Cal("floatingButton", {
+          calLink: "allan-chapuis/demande-de-devis",
+          hideButtonIcon: false,
+          buttonColor: "#1e1e1e",
+          buttonTextColor: "#39b87d",
+          buttonPosition: "bottom-left",
+          buttonText: "Demander un devis"
+        });
+        Cal("ui", {
+          styles: {
+            branding: {
+              brandColor: "#39b87d"
+            }
+          },
+          hideEventTypeDetails: false,
+          layout: "month_view"
+        });
+        calInitialized = true; // Set the flag to true after initialization
+      }
+    }
+
+    // Function to toggle appointment types
+    function toggleAppointmentType() {
+      if ($('#toggleSwitch').is(':checked')) {
+        $('#rdv-physique').removeClass('active');
+        $('#rdv-visio').addClass('active');
+        $('#titreRdv').text('Prendre un rendez vous en visio :');
+        $('#toggleLabel').removeClass('grayed-out');
+        Cal("preload", {calLink: "allan-chapuis/rdv-physique"})
+      } else {
+        $('#rdv-visio').removeClass('active');
+        $('#rdv-physique').addClass('active');
+        $('#titreRdv').text('Prendre un rendez vous :');
+        $('#toggleLabel').addClass('grayed-out');
+        Cal("preload", {calLink: "allan-chapuis/rdv-visio-ou-tel"})
+      }
+      initializeCal(); // Reinitialize Cal with the new active div
+      $('cal-modal-box').hide(); // Cacher le bouton flottant
+    }
+
+    // Initial setup
+    if ($('#toggleSwitch').is(':checked')) {
+      $('#rdv-visio').addClass('active');
+    } else {
+      $('#rdv-physique').addClass('active');
+    }
+    initializeCal();
+
+    // Initialize the floating button on page load
+    initializeFloatingButton();
+
+    // Event listener for toggle switch
+    $('#toggleSwitch').change(toggleAppointmentType);
+
     //annees veille home
     var annee2 = document.getElementById('anneesVeille');
     if (annee2 !== null) {
@@ -129,6 +213,18 @@
       scrollTop: 0
     }, 1500, 'easeInOutExpo');
     return false;
+  });
+
+  // Scroll to contact
+  $(document).ready(function() {
+    // Ajouter un gestionnaire d'événements de clic au bouton
+    $('.scroll-to-contact').click(function() {
+      // Animer le défilement vers la section avec l'ID 'contact'
+      $('html, body').animate({
+        scrollTop: $('#contact').offset().top
+      }, 1500, 'easeInOutExpo');
+      return false;
+    });
   });
 
   /*--/ Star ScrollTop /--*/
