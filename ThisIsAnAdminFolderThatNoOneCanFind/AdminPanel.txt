@@ -1,0 +1,3 @@
+The big boss sent me a message!
+Great it was easy to be here, here is the flag:
+FLAG{Why_This_Secret_Folder_Is_Not_Secret}
