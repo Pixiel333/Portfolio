@@ -26,7 +26,11 @@
         }
         return age;
     }
-    
+    //annees veille page de veille
+    var annee3 = document.getElementById('anneesVeille2');
+    if (annee3 !== null) {
+      annee3.textContent = getAge(new Date("2017/01/01")).toString();
+    }
     //kali egg
     var egg = new Egg("k,a,l,i,l,i,n,u,x", function() {
       // Crée une nouvelle div HTML
@@ -178,11 +182,7 @@
       annee2.textContent = getAge(new Date("2017/01/01")).toString();
     }
 
-    //annees veille page de veille
-    var annee3 = document.getElementById('anneesVeille2');
-    if (annee3 !== null) {
-      annee3.textContent = getAge(new Date("2017/01/01")).toString();
-    }
+
   });
 
   $('.navbar-toggler').on('click', function() {
